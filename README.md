@@ -1,7 +1,7 @@
 # csc690-fa19-jzhao11  
   
 Team Member:  
-Jianfei Zhao  
+Jianfei Zhao  (I would like to work by myself.)
   
 Topic:  
 BuySellApp  
