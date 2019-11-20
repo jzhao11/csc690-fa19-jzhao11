@@ -36,7 +36,6 @@ class ItemModel: Hashable {
         self.description = jsonDict["description"].stringValue
         self.seller = jsonDict["username"].stringValue
         self.createdAt = jsonDict["created_at"].stringValue
-        print("\(self.id);\(self.price);\(self.seller)")
     }
     
     // Hashable
