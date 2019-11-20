@@ -42,7 +42,12 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         let item = items[indexPath.row]
         let cell = UITableViewCell()
         cell.textLabel?.text = "\(item.title);\(item.price)"
+        if
+            let url = URL(string: "http://127.0.0.1:8888/buysell/\(item.img)"),
+            let data = try? Data(contentsOf: url) {
+            let image = UIImage(data: data)
+            cell.imageView?.image = image
+        }
         return cell
     }
 }
-
