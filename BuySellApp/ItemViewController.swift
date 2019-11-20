@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class ItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var tableView: UITableView!
     var items: [ItemModel] = []
 
@@ -36,7 +35,6 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("return items.count")
         return items.count
     }
     
@@ -44,7 +42,6 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         let item = items[indexPath.row]
         let cell = UITableViewCell()
         cell.textLabel?.text = "\(item.title);\(item.price)"
-//        cell.imageView?.image = item.
         return cell
     }
 }
