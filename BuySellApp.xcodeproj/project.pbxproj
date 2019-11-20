@@ -3,88 +3,109 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043C065C23791F3C0068C9B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C065B23791F3C0068C9B8 /* AppDelegate.swift */; };
-		043C065E23791F3C0068C9B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C065D23791F3C0068C9B8 /* SceneDelegate.swift */; };
-		043C066023791F3C0068C9B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C065F23791F3C0068C9B8 /* ContentView.swift */; };
-		043C066223791F3F0068C9B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043C066123791F3F0068C9B8 /* Assets.xcassets */; };
-		043C066523791F3F0068C9B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043C066423791F3F0068C9B8 /* Preview Assets.xcassets */; };
-		043C066823791F3F0068C9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043C066623791F3F0068C9B8 /* LaunchScreen.storyboard */; };
+		0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93423847D4B003BA3DA /* AppDelegate.swift */; };
+		0484D93723847D4B003BA3DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93623847D4B003BA3DA /* SceneDelegate.swift */; };
+		0484D93923847D4B003BA3DA /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93823847D4B003BA3DA /* ItemViewController.swift */; };
+		0484D93C23847D4B003BA3DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93A23847D4B003BA3DA /* Main.storyboard */; };
+		0484D93E23847D4C003BA3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93D23847D4C003BA3DA /* Assets.xcassets */; };
+		0484D94123847D4C003BA3DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */; };
+		0484D94B2384818E003BA3DA /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D94A2384818E003BA3DA /* ItemModel.swift */; };
+		12DF79FA56729B07BCB36241 /* Pods_BuySellApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8383E561C6784F8907B63C26 /* Pods_BuySellApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043C065823791F3C0068C9B8 /* BuySellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuySellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		043C065B23791F3C0068C9B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		043C065D23791F3C0068C9B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043C065F23791F3C0068C9B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		043C066123791F3F0068C9B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		043C066423791F3F0068C9B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		043C066723791F3F0068C9B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		043C066923791F3F0068C9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0484D93123847D4B003BA3DA /* BuySellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuySellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0484D93423847D4B003BA3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0484D93623847D4B003BA3DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0484D93823847D4B003BA3DA /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		0484D93B23847D4B003BA3DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0484D93D23847D4C003BA3DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0484D94023847D4C003BA3DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0484D94223847D4C003BA3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0484D94A2384818E003BA3DA /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		1C71452942D4677E6475EB7F /* Pods-BuySellApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuySellApp.debug.xcconfig"; path = "Target Support Files/Pods-BuySellApp/Pods-BuySellApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8383E561C6784F8907B63C26 /* Pods_BuySellApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuySellApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C644F59D4762567B1EEA495 /* Pods-BuySellApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuySellApp.release.xcconfig"; path = "Target Support Files/Pods-BuySellApp/Pods-BuySellApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		043C065523791F3C0068C9B8 /* Frameworks */ = {
+		0484D92E23847D4B003BA3DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12DF79FA56729B07BCB36241 /* Pods_BuySellApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043C064F23791F3C0068C9B8 = {
+		0484D92823847D4B003BA3DA = {
 			isa = PBXGroup;
 			children = (
-				043C065A23791F3C0068C9B8 /* BuySellApp */,
-				043C065923791F3C0068C9B8 /* Products */,
+				0484D93323847D4B003BA3DA /* BuySellApp */,
+				0484D93223847D4B003BA3DA /* Products */,
+				C12217039C96AE6D7E0DE9C8 /* Pods */,
+				2C13862AAD9BD9ABC49BFC72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		043C065923791F3C0068C9B8 /* Products */ = {
+		0484D93223847D4B003BA3DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				043C065823791F3C0068C9B8 /* BuySellApp.app */,
+				0484D93123847D4B003BA3DA /* BuySellApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		043C065A23791F3C0068C9B8 /* BuySellApp */ = {
+		0484D93323847D4B003BA3DA /* BuySellApp */ = {
 			isa = PBXGroup;
 			children = (
-				043C065B23791F3C0068C9B8 /* AppDelegate.swift */,
-				043C065D23791F3C0068C9B8 /* SceneDelegate.swift */,
-				043C065F23791F3C0068C9B8 /* ContentView.swift */,
-				043C066123791F3F0068C9B8 /* Assets.xcassets */,
-				043C066623791F3F0068C9B8 /* LaunchScreen.storyboard */,
-				043C066923791F3F0068C9B8 /* Info.plist */,
-				043C066323791F3F0068C9B8 /* Preview Content */,
+				0484D93423847D4B003BA3DA /* AppDelegate.swift */,
+				0484D93623847D4B003BA3DA /* SceneDelegate.swift */,
+				0484D93823847D4B003BA3DA /* ItemViewController.swift */,
+				0484D93A23847D4B003BA3DA /* Main.storyboard */,
+				0484D93D23847D4C003BA3DA /* Assets.xcassets */,
+				0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */,
+				0484D94223847D4C003BA3DA /* Info.plist */,
+				0484D94A2384818E003BA3DA /* ItemModel.swift */,
 			);
 			path = BuySellApp;
 			sourceTree = "<group>";
 		};
-		043C066323791F3F0068C9B8 /* Preview Content */ = {
+		2C13862AAD9BD9ABC49BFC72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				043C066423791F3F0068C9B8 /* Preview Assets.xcassets */,
+				8383E561C6784F8907B63C26 /* Pods_BuySellApp.framework */,
 			);
-			path = "Preview Content";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C12217039C96AE6D7E0DE9C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C71452942D4677E6475EB7F /* Pods-BuySellApp.debug.xcconfig */,
+				8C644F59D4762567B1EEA495 /* Pods-BuySellApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		043C065723791F3C0068C9B8 /* BuySellApp */ = {
+		0484D93023847D4B003BA3DA /* BuySellApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 043C066C23791F3F0068C9B8 /* Build configuration list for PBXNativeTarget "BuySellApp" */;
+			buildConfigurationList = 0484D94523847D4C003BA3DA /* Build configuration list for PBXNativeTarget "BuySellApp" */;
 			buildPhases = (
-				043C065423791F3C0068C9B8 /* Sources */,
-				043C065523791F3C0068C9B8 /* Frameworks */,
-				043C065623791F3C0068C9B8 /* Resources */,
+				D3BAF1B641981E1AAC9C7ECC /* [CP] Check Pods Manifest.lock */,
+				0484D92D23847D4B003BA3DA /* Sources */,
+				0484D92E23847D4B003BA3DA /* Frameworks */,
+				0484D92F23847D4B003BA3DA /* Resources */,
+				2F808A10D1ED61CF406ADEFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -92,25 +113,25 @@
 			);
 			name = BuySellApp;
 			productName = BuySellApp;
-			productReference = 043C065823791F3C0068C9B8 /* BuySellApp.app */;
+			productReference = 0484D93123847D4B003BA3DA /* BuySellApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		043C065023791F3C0068C9B8 /* Project object */ = {
+		0484D92923847D4B003BA3DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Christian Zhao";
 				TargetAttributes = {
-					043C065723791F3C0068C9B8 = {
+					0484D93023847D4B003BA3DA = {
 						CreatedOnToolsVersion = 11.2;
 					};
 				};
 			};
-			buildConfigurationList = 043C065323791F3C0068C9B8 /* Build configuration list for PBXProject "BuySellApp" */;
+			buildConfigurationList = 0484D92C23847D4B003BA3DA /* Build configuration list for PBXProject "BuySellApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,47 +139,98 @@
 				en,
 				Base,
 			);
-			mainGroup = 043C064F23791F3C0068C9B8;
-			productRefGroup = 043C065923791F3C0068C9B8 /* Products */;
+			mainGroup = 0484D92823847D4B003BA3DA;
+			productRefGroup = 0484D93223847D4B003BA3DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				043C065723791F3C0068C9B8 /* BuySellApp */,
+				0484D93023847D4B003BA3DA /* BuySellApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		043C065623791F3C0068C9B8 /* Resources */ = {
+		0484D92F23847D4B003BA3DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043C066823791F3F0068C9B8 /* LaunchScreen.storyboard in Resources */,
-				043C066523791F3F0068C9B8 /* Preview Assets.xcassets in Resources */,
-				043C066223791F3F0068C9B8 /* Assets.xcassets in Resources */,
+				0484D94123847D4C003BA3DA /* LaunchScreen.storyboard in Resources */,
+				0484D93E23847D4C003BA3DA /* Assets.xcassets in Resources */,
+				0484D93C23847D4B003BA3DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F808A10D1ED61CF406ADEFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuySellApp/Pods-BuySellApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuySellApp/Pods-BuySellApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BuySellApp/Pods-BuySellApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3BAF1B641981E1AAC9C7ECC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuySellApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		043C065423791F3C0068C9B8 /* Sources */ = {
+		0484D92D23847D4B003BA3DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043C065C23791F3C0068C9B8 /* AppDelegate.swift in Sources */,
-				043C065E23791F3C0068C9B8 /* SceneDelegate.swift in Sources */,
-				043C066023791F3C0068C9B8 /* ContentView.swift in Sources */,
+				0484D94B2384818E003BA3DA /* ItemModel.swift in Sources */,
+				0484D93923847D4B003BA3DA /* ItemViewController.swift in Sources */,
+				0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */,
+				0484D93723847D4B003BA3DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		043C066623791F3F0068C9B8 /* LaunchScreen.storyboard */ = {
+		0484D93A23847D4B003BA3DA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				043C066723791F3F0068C9B8 /* Base */,
+				0484D93B23847D4B003BA3DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0484D94023847D4C003BA3DA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +238,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		043C066A23791F3F0068C9B8 /* Debug */ = {
+		0484D94323847D4C003BA3DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +298,7 @@
 			};
 			name = Debug;
 		};
-		043C066B23791F3F0068C9B8 /* Release */ = {
+		0484D94423847D4C003BA3DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,13 +352,12 @@
 			};
 			name = Release;
 		};
-		043C066D23791F3F0068C9B8 /* Debug */ = {
+		0484D94623847D4C003BA3DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C71452942D4677E6475EB7F /* Pods-BuySellApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BuySellApp/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BuySellApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,13 +370,12 @@
 			};
 			name = Debug;
 		};
-		043C066E23791F3F0068C9B8 /* Release */ = {
+		0484D94723847D4C003BA3DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C644F59D4762567B1EEA495 /* Pods-BuySellApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BuySellApp/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BuySellApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,25 +391,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		043C065323791F3C0068C9B8 /* Build configuration list for PBXProject "BuySellApp" */ = {
+		0484D92C23847D4B003BA3DA /* Build configuration list for PBXProject "BuySellApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				043C066A23791F3F0068C9B8 /* Debug */,
-				043C066B23791F3F0068C9B8 /* Release */,
+				0484D94323847D4C003BA3DA /* Debug */,
+				0484D94423847D4C003BA3DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		043C066C23791F3F0068C9B8 /* Build configuration list for PBXNativeTarget "BuySellApp" */ = {
+		0484D94523847D4C003BA3DA /* Build configuration list for PBXNativeTarget "BuySellApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				043C066D23791F3F0068C9B8 /* Debug */,
-				043C066E23791F3F0068C9B8 /* Release */,
+				0484D94623847D4C003BA3DA /* Debug */,
+				0484D94723847D4C003BA3DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 043C065023791F3C0068C9B8 /* Project object */;
+	rootObject = 0484D92923847D4B003BA3DA /* Project object */;
 }
