@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irq-VZ-cTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855.07246376811599" y="-658.25892857142856"/>
+            <point key="canvasLocation" x="-2762" y="86"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L1s-hH-5rL">
@@ -154,11 +154,69 @@
                     <connections>
                         <segue destination="BAa-eW-57O" kind="relationship" relationship="viewControllers" id="Bm1-kJ-rRs"/>
                         <segue destination="jyt-ll-YOm" kind="relationship" relationship="viewControllers" id="67D-xD-HQb"/>
+                        <segue destination="4zl-vG-mSA" kind="relationship" relationship="viewControllers" id="Wh4-fE-809"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prE-4Z-hIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1801" y="-658"/>
+            <point key="canvasLocation" x="-1801" y="-721"/>
+        </scene>
+        <!--SignIn View Controller-->
+        <scene sceneID="7Gb-MP-MLV">
+            <objects>
+                <viewController id="4zl-vG-mSA" userLabel="SignIn View Controller" customClass="SignInViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXP-x3-MoC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuc-6X-muO">
+                                <rect key="frame" x="166.72955012857619" y="207.99999999999977" width="79.999999999999886" height="21.000000000000227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-5v-k77">
+                                <rect key="frame" x="166.72955012857619" y="341" width="79.999999999999886" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBY-oY-574">
+                                <rect key="frame" x="159" y="245" width="100" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ak4-ae-h2J">
+                                <rect key="frame" x="159" y="379" width="100" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kmm-SF-lfD">
+                                <rect key="frame" x="106.45573678678329" y="505.00000000000023" width="200.00000000000011" height="31.999999999999773"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="SIgn In"/>
+                                    <segment title="Sign Up"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pzg-Nb-tpP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Me" id="3tt-Du-7b5"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Ak4-ae-h2J" id="ubK-bX-Ah1"/>
+                        <outlet property="segment" destination="kmm-SF-lfD" id="idB-M8-IIT"/>
+                        <outlet property="usernameTextField" destination="kBY-oY-574" id="8Av-y9-x4z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROO-df-9hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855" y="-721"/>
         </scene>
     </scenes>
 </document>

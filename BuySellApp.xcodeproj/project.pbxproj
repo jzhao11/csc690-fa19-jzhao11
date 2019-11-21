@@ -16,6 +16,7 @@
 		0484D94123847D4C003BA3DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */; };
 		0484D94B2384818E003BA3DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D94A2384818E003BA3DA /* Item.swift */; };
 		04C906452385F93600A58153 /* BuyingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C906442385F93600A58153 /* BuyingDetailViewController.swift */; };
+		04DB74B4238743960094909A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB74B3238743960094909A /* SignInViewController.swift */; };
 		12DF79FA56729B07BCB36241 /* Pods_BuySellApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8383E561C6784F8907B63C26 /* Pods_BuySellApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0484D94223847D4C003BA3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0484D94A2384818E003BA3DA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		04C906442385F93600A58153 /* BuyingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingDetailViewController.swift; sourceTree = "<group>"; };
+		04DB74B3238743960094909A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1C71452942D4677E6475EB7F /* Pods-BuySellApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuySellApp.debug.xcconfig"; path = "Target Support Files/Pods-BuySellApp/Pods-BuySellApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8383E561C6784F8907B63C26 /* Pods_BuySellApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuySellApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C644F59D4762567B1EEA495 /* Pods-BuySellApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuySellApp.release.xcconfig"; path = "Target Support Files/Pods-BuySellApp/Pods-BuySellApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,16 +71,17 @@
 		0484D93323847D4B003BA3DA /* BuySellApp */ = {
 			isa = PBXGroup;
 			children = (
-				0484D93423847D4B003BA3DA /* AppDelegate.swift */,
-				0484D93623847D4B003BA3DA /* SceneDelegate.swift */,
 				0484D93823847D4B003BA3DA /* BuyingViewController.swift */,
 				04C906442385F93600A58153 /* BuyingDetailViewController.swift */,
 				0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */,
+				04DB74B3238743960094909A /* SignInViewController.swift */,
 				0484D93A23847D4B003BA3DA /* Main.storyboard */,
 				0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */,
-				0484D93D23847D4C003BA3DA /* Assets.xcassets */,
-				0484D94223847D4C003BA3DA /* Info.plist */,
 				0484D94A2384818E003BA3DA /* Item.swift */,
+				0484D93D23847D4C003BA3DA /* Assets.xcassets */,
+				0484D93423847D4B003BA3DA /* AppDelegate.swift */,
+				0484D93623847D4B003BA3DA /* SceneDelegate.swift */,
+				0484D94223847D4C003BA3DA /* Info.plist */,
 			);
 			path = BuySellApp;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB74B4238743960094909A /* SignInViewController.swift in Sources */,
 				04C906452385F93600A58153 /* BuyingDetailViewController.swift in Sources */,
 				0469D5BF23866D2400D9ECE8 /* SellingViewController.swift in Sources */,
 				0484D94B2384818E003BA3DA /* Item.swift in Sources */,

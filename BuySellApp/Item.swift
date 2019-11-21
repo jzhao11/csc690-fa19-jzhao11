@@ -1,5 +1,5 @@
 //
-//  ItemModel.swift
+//  Item.swift
 //  BuySellApp
 //
 //  Created by Mac on 11/19/19.
