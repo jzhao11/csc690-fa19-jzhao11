@@ -1,5 +1,5 @@
 //
-//  ItemViewController.swift
+//  BuyingViewController.swift
 //  BuySellApp
 //
 //  Created by Mac on 11/19/19.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BuyingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var items: [Item] = []
     var itemId: String = ""
@@ -61,18 +61,18 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let nextPage = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController") as! ItemDetailViewController
+        let nextPage = storyBoard.instantiateViewController(withIdentifier: "BuyingDetailViewController") as! BuyingDetailViewController
         nextPage.itemId = items[indexPath.row].id
         self.navigationController?.pushViewController(nextPage, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
-            let itemDetailViewController = segue.destination as? ItemDetailViewController
+            let buyingDetailViewController = segue.destination as? BuyingDetailViewController
         else {
             return
         }
         
-        itemDetailViewController.itemId = itemId
+        buyingDetailViewController.itemId = itemId
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ItemDetailViewController.swift
+//  BuyingDetailViewController.swift
 //  BuySellApp
 //
 //  Created by Mac on 11/20/19.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ItemDetailViewController: UIViewController {
+class BuyingDetailViewController: UIViewController {
     
     var itemId: String = ""
     

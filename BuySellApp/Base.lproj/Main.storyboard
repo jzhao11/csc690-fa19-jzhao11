@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item View Controller-->
+        <!--Buying View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ItemViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BuyingViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bh8-aE-7yf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-855" y="86"/>
         </scene>
-        <!--Item Detail View Controller-->
+        <!--Buying Detail View Controller-->
         <scene sceneID="2Ko-Rh-6d6">
             <objects>
-                <viewController storyboardIdentifier="ItemDetailViewController" id="CZn-eq-jH5" customClass="ItemDetailViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuyingDetailViewController" id="CZn-eq-jH5" customClass="BuyingDetailViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBf-fN-22B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
