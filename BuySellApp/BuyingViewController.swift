@@ -26,6 +26,7 @@ class BuyingViewController: UIViewController, UITableViewDelegate, UITableViewDa
             else {
                 return
             }
+            
             let jsonArr = JSON(data)
             for jsonDict in jsonArr.arrayValue {
                 self.items.append(Item(jsonDict: jsonDict))
@@ -36,6 +37,16 @@ class BuyingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let buyingDetailViewController = segue.destination as? BuyingDetailViewController
+        else {
+            return
+        }
+        
+        buyingDetailViewController.itemId = itemId
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -44,12 +55,14 @@ class BuyingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let item = items[indexPath.row]
         let cell = UITableViewCell()
         cell.textLabel?.text = "\(item.title);\(item.price)"
+        
         if
             let url = URL(string: "http://127.0.0.1:8888/buysell/\(item.img)"),
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
             cell.imageView?.image = image
         }
+        
         return cell
     }
     
@@ -64,15 +77,5 @@ class BuyingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let nextPage = storyBoard.instantiateViewController(withIdentifier: "BuyingDetailViewController") as! BuyingDetailViewController
         nextPage.itemId = items[indexPath.row].id
         self.navigationController?.pushViewController(nextPage, animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            let buyingDetailViewController = segue.destination as? BuyingDetailViewController
-        else {
-            return
-        }
-        
-        buyingDetailViewController.itemId = itemId
     }
 }

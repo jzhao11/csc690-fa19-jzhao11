@@ -75,8 +75,8 @@
 				0484D93823847D4B003BA3DA /* BuyingViewController.swift */,
 				04C906442385F93600A58153 /* BuyingDetailViewController.swift */,
 				0484D93A23847D4B003BA3DA /* Main.storyboard */,
-				0484D93D23847D4C003BA3DA /* Assets.xcassets */,
 				0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */,
+				0484D93D23847D4C003BA3DA /* Assets.xcassets */,
 				0484D94223847D4C003BA3DA /* Info.plist */,
 				0484D94A2384818E003BA3DA /* Item.swift */,
 			);

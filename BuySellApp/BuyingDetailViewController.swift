@@ -27,6 +27,7 @@ class BuyingDetailViewController: UIViewController {
             else {
                 return
             }
+            
             let jsonDict = JSON(data)
             let item = Item(jsonDict: jsonDict);
             self.titleLabel.text = "Title: \(item.title)"
