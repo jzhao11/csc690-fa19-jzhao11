@@ -15,7 +15,8 @@ class ItemDetailViewController: UIViewController {
     var itemId: String = ""
     
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var sellerLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class ItemDetailViewController: UIViewController {
             let jsonDict = JSON(data)
             let item = Item(jsonDict: jsonDict);
             self.titleLabel.text = item.title
+            self.sellerLabel.text = item.seller
+            self.priceLabel.text = "$ \(item.price)"
         }
     }
 }
