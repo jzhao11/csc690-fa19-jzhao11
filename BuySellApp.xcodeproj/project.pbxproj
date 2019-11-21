@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0469D5BF23866D2400D9ECE8 /* SellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */; };
 		0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93423847D4B003BA3DA /* AppDelegate.swift */; };
 		0484D93723847D4B003BA3DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93623847D4B003BA3DA /* SceneDelegate.swift */; };
 		0484D93923847D4B003BA3DA /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93823847D4B003BA3DA /* ItemViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellingViewController.swift; sourceTree = "<group>"; };
 		0484D93123847D4B003BA3DA /* BuySellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuySellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0484D93423847D4B003BA3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0484D93623847D4B003BA3DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				0484D93423847D4B003BA3DA /* AppDelegate.swift */,
+				0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */,
 				0484D93623847D4B003BA3DA /* SceneDelegate.swift */,
 				0484D93823847D4B003BA3DA /* ItemViewController.swift */,
 				04C906442385F93600A58153 /* ItemDetailViewController.swift */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C906452385F93600A58153 /* ItemDetailViewController.swift in Sources */,
+				0469D5BF23866D2400D9ECE8 /* SellingViewController.swift in Sources */,
 				0484D94B2384818E003BA3DA /* Item.swift in Sources */,
 				0484D93923847D4B003BA3DA /* ItemViewController.swift in Sources */,
 				0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */,
