@@ -20,7 +20,6 @@ class BuyingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
         let url = "http://127.0.0.1:8888/buysell/api/item/readbyid?id=\(itemId)"
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
             guard
@@ -30,9 +29,9 @@ class BuyingDetailViewController: UIViewController {
             }
             let jsonDict = JSON(data)
             let item = Item(jsonDict: jsonDict);
-            self.titleLabel.text = item.title
-            self.sellerLabel.text = item.seller
-            self.priceLabel.text = "$ \(item.price)"
+            self.titleLabel.text = "Title: \(item.title)"
+            self.sellerLabel.text = "Seller: \(item.seller)"
+            self.priceLabel.text = "Price: $\(item.price)"
         }
     }
 }
