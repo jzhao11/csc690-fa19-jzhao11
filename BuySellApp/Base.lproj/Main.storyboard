@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkn-kr-kcl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186.95652173913044" y="85.714285714285708"/>
+            <point key="canvasLocation" x="94" y="86"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="KJt-vY-46R">
@@ -115,14 +115,31 @@
                     <view key="view" contentMode="scaleToFill" id="YHf-zj-zoV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPF-yz-Zzw">
+                                <rect key="frame" x="87" y="227" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGk-hh-jO8">
+                                <rect key="frame" x="167" y="678" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postItem:" destination="jyt-ll-YOm" eventType="touchUpInside" id="c0f-mu-cDz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="HsP-at-o9r"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sell" id="v3K-g3-wh2" userLabel="Sell"/>
+                    <connections>
+                        <outlet property="imageView" destination="zPF-yz-Zzw" id="haU-q7-ogV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irq-VZ-cTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="-658"/>
+            <point key="canvasLocation" x="-855.07246376811599" y="-658.25892857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L1s-hH-5rL">
