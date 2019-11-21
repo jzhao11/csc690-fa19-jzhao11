@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Alamofire
 import SwiftyJSON
 
-class ItemModel: Hashable {
+class Item {
     let id: String
     let title: String
     let img: String
@@ -36,16 +37,6 @@ class ItemModel: Hashable {
         self.description = jsonDict["description"].stringValue
         self.seller = jsonDict["username"].stringValue
         self.createdAt = jsonDict["created_at"].stringValue
-    }
-    
-    // Hashable
-    func hash(into hasher: inout Hasher) {
-        id.hash(into: &hasher)
-    }
-    
-    // Equatable
-    static func == (lhs: ItemModel, rhs: ItemModel) -> Bool {
-        return lhs.id == rhs.id
     }
 }
 

@@ -12,22 +12,24 @@ import SwiftyJSON
 
 class ItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var items: [Item] = []
+    var itemId: String = ""
+    
     @IBOutlet weak var tableView: UITableView!
-    var items: [ItemModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = "http://127.0.0.1:8888/buysell/api/item/readall"
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
-            guard let data = response.result.value else {
+            guard
+                let data = response.result.value
+            else {
                 return
             }
-            
             let jsonArr = JSON(data)
             for jsonDict in jsonArr.arrayValue {
-                self.items.append(ItemModel(jsonDict: jsonDict))
+                self.items.append(Item(jsonDict: jsonDict))
             }
-            print(self.items.count)
             self.tableView.reloadData()
         }
         tableView.delegate = self
@@ -49,5 +51,28 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.imageView?.image = image
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard
+            indexPath.row < items.count
+        else {
+            return
+        }
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextPage = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController") as! ItemDetailViewController
+        nextPage.itemId = items[indexPath.row].id
+        self.navigationController?.pushViewController(nextPage, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let itemDetailViewController = segue.destination as? ItemDetailViewController
+        else {
+            return
+        }
+        
+        itemDetailViewController.itemId = itemId
     }
 }
