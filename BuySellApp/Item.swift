@@ -13,7 +13,7 @@ import SwiftyJSON
 class Item {
     let id: String
     let title: String
-    let img: String
+    let titleImage: String
     let price: Double
     let description: String
     let seller: String
@@ -22,7 +22,7 @@ class Item {
     init(id: String, title: String, img: String, price: Double, description: String, seller: String, createdAt: String) {
         self.id = id
         self.title = title
-        self.img = img
+        self.titleImage = img
         self.price = price
         self.description = description
         self.seller = seller
@@ -32,7 +32,7 @@ class Item {
     init(jsonDict: JSON) {
         self.id = jsonDict["id"].stringValue
         self.title = jsonDict["title"].stringValue
-        self.img = jsonDict["title_img"].stringValue
+        self.titleImage = jsonDict["title_img"].stringValue
         self.price = jsonDict["price"].doubleValue
         self.description = jsonDict["description"].stringValue
         self.seller = jsonDict["username"].stringValue

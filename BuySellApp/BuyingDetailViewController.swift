@@ -20,7 +20,7 @@ class BuyingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "http://127.0.0.1:8888/buysell/api/item/readbyid?id=\(itemId)"
+        let url = "http://52.53.151.37/buysell/api/item/readbyid?id=\(itemId)"
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
             guard
                 let data = response.result.value
@@ -29,8 +29,8 @@ class BuyingDetailViewController: UIViewController {
             }
             
             let jsonDict = JSON(data)
-            let item = Item(jsonDict: jsonDict);
-            self.titleLabel.text = "Title: \(item.title)"
+            let item = Item(jsonDict: jsonDict)
+            self.titleLabel.text = "Item: \(item.title)"
             self.sellerLabel.text = "Seller: \(item.seller)"
             self.priceLabel.text = "Price: $\(item.price)"
         }
