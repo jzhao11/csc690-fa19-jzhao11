@@ -9,9 +9,18 @@
 import UIKit
 import Alamofire
 
-class SellingViewController: UIViewController {
+class SellingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func chooseImage(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     @IBAction func postItem(_ sender: Any) {
         let url = "http://127.0.0.1:8888/buysell/api/item/create"
         let params = [
@@ -24,7 +33,20 @@ class SellingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: "MacMini")
+        imagePicker.delegate = self
+//        imageView.image = UIImage(named: "MacMini")
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     func upload(url: String, params: [String: String]?, image: UIImage?
