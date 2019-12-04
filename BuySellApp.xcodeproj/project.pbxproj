@@ -10,6 +10,7 @@
 		0419A5D223887A840021C36E /* BuyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419A5D123887A840021C36E /* BuyingViewController.swift */; };
 		0419A5D5238882680021C36E /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419A5D3238882680021C36E /* ItemViewCell.swift */; };
 		0419A5D6238882680021C36E /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0419A5D4238882680021C36E /* ItemViewCell.xib */; };
+		0430AE432397BBB90073D061 /* MyItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430AE422397BBB90073D061 /* MyItemsViewController.swift */; };
 		0469D5BF23866D2400D9ECE8 /* SellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */; };
 		0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93423847D4B003BA3DA /* AppDelegate.swift */; };
 		0484D93723847D4B003BA3DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93623847D4B003BA3DA /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		0419A5D123887A840021C36E /* BuyingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingViewController.swift; sourceTree = "<group>"; };
 		0419A5D3238882680021C36E /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		0419A5D4238882680021C36E /* ItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
+		0430AE422397BBB90073D061 /* MyItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsViewController.swift; sourceTree = "<group>"; };
 		0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellingViewController.swift; sourceTree = "<group>"; };
 		0484D93123847D4B003BA3DA /* BuySellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuySellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0484D93423847D4B003BA3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0419A5D123887A840021C36E /* BuyingViewController.swift */,
+				0430AE422397BBB90073D061 /* MyItemsViewController.swift */,
 				04C906442385F93600A58153 /* BuyingDetailViewController.swift */,
 				0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */,
 				04DB74B3238743960094909A /* SignInViewController.swift */,
@@ -230,6 +233,7 @@
 				0469D5BF23866D2400D9ECE8 /* SellingViewController.swift in Sources */,
 				0419A5D5238882680021C36E /* ItemViewCell.swift in Sources */,
 				0484D94B2384818E003BA3DA /* Item.swift in Sources */,
+				0430AE432397BBB90073D061 /* MyItemsViewController.swift in Sources */,
 				0419A5D223887A840021C36E /* BuyingViewController.swift in Sources */,
 				0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */,
 				0484D93723847D4B003BA3DA /* SceneDelegate.swift in Sources */,
