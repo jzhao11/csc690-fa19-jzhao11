@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V1G-BB-GjT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7zF-BX-aIi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -109,11 +109,26 @@
             </objects>
             <point key="canvasLocation" x="-2762" y="86"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Hvg-FU-C5r">
+            <objects>
+                <navigationController id="7zF-BX-aIi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UmR-ZT-2yw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4zl-vG-mSA" kind="relationship" relationship="rootViewController" id="hVu-vB-6dj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIb-0s-bpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2762" y="-1543"/>
+        </scene>
+        <!--Root Tab Bar Controller-->
         <scene sceneID="L1s-hH-5rL">
             <objects>
-                <tabBarController id="V1G-BB-GjT" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="EpG-6X-K3t"/>
+                <tabBarController id="V1G-BB-GjT" customClass="RootTabBarController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7A2-AT-q2G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -122,7 +137,7 @@
                     <connections>
                         <segue destination="BAa-eW-57O" kind="relationship" relationship="viewControllers" id="Bm1-kJ-rRs"/>
                         <segue destination="jyt-ll-YOm" kind="relationship" relationship="viewControllers" id="67D-xD-HQb"/>
-                        <segue destination="PSA-Ba-Zr5" kind="relationship" relationship="viewControllers" id="n8F-wY-pr1"/>
+                        <segue destination="QB4-oj-u0M" kind="relationship" relationship="viewControllers" id="LRN-vj-F3Q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prE-4Z-hIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,7 +192,7 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signIn:" destination="4zl-vG-mSA" eventType="touchUpInside" id="FYP-BT-edo"/>
-                                    <segue destination="QB4-oj-u0M" kind="show" id="2Dz-Eb-jNx"/>
+                                    <segue destination="V1G-BB-GjT" kind="show" id="Msk-Pt-G9g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,25 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROO-df-9hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-721"/>
-        </scene>
-        <!--Navigation-->
-        <scene sceneID="GO0-Ee-0K0">
-            <objects>
-                <navigationController id="PSA-Ba-Zr5" userLabel="Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My" id="8rl-GO-TWf"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AM9-xE-UYo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="4zl-vG-mSA" kind="relationship" relationship="rootViewController" id="ULs-M4-f4p"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IeQ-JX-HlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-855" y="-721"/>
+            <point key="canvasLocation" x="-2762" y="-721"/>
         </scene>
         <!--My Items View Controller-->
         <scene sceneID="ay9-cm-0Dc">
@@ -241,7 +238,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqn-A4-ujY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="-1043"/>
+            <point key="canvasLocation" x="93" y="-721"/>
         </scene>
         <!--My Messages View Controller-->
         <scene sceneID="9ye-Gu-lUZ">
@@ -270,7 +267,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86i-vc-hOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="-377"/>
+            <point key="canvasLocation" x="1048" y="-721"/>
         </scene>
         <!--Buying View Controller-->
         <scene sceneID="FAV-Ec-zRj">
@@ -358,7 +355,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Messages"/>
                                 <connections>
-                                    <action selector="myMessagesButton:" destination="QB4-oj-u0M" eventType="touchUpInside" id="2U5-vf-9tv"/>
+                                    <action selector="viewMyMessages:" destination="QB4-oj-u0M" eventType="touchUpInside" id="Tm8-Ju-b12"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-Of-giI">
@@ -366,21 +363,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Items"/>
                                 <connections>
-                                    <action selector="myItemsButton:" destination="QB4-oj-u0M" eventType="touchUpInside" id="JOQ-gv-dx8"/>
+                                    <action selector="viewMyItems:" destination="QB4-oj-u0M" eventType="touchUpInside" id="wgq-3j-SvM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7vF-fW-1OI"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My" id="EIf-bA-rpz"/>
                     <navigationItem key="navigationItem" id="n4A-q4-TrP"/>
                     <connections>
+                        <outlet property="myItemsButton" destination="xP9-Of-giI" id="cAe-me-C9D"/>
+                        <outlet property="myMessagesButton" destination="Z4d-o0-nwy" id="L0Z-Ju-eOc"/>
                         <outlet property="scrollView" destination="XwT-Kd-1C1" id="Cpv-TR-zFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbn-UG-omx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="-721"/>
+            <point key="canvasLocation" x="-855" y="-721"/>
         </scene>
     </scenes>
 </document>

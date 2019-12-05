@@ -13,9 +13,12 @@ let screen_height = UIScreen.main.bounds.size.height
 
 class MyDashBoardViewController: UIViewController {
 
-    var currentPosition = 0
-
+    @IBOutlet weak var myItemsButton: UIButton!
+    @IBOutlet weak var myMessagesButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var currentPosition = 0
+    var buttons: [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +29,26 @@ class MyDashBoardViewController: UIViewController {
         self.scrollView.addSubview(myItemsViewController.view)
         self.scrollView.addSubview(myMessagesViewController.view)
         self.scrollView.contentSize = CGSize(width: 2 * screen_width, height: 0)
+        
+        buttons.append(myItemsButton)
+        buttons.append(myMessagesButton)
+        buttons[currentPosition].backgroundColor = UIColor.gray
     }
     
-    @IBAction func myItemsButton(_ sender: Any) {
+    @IBAction func viewMyItems(_ sender: Any) {
         if currentPosition != 0 {
+            buttons[currentPosition].backgroundColor = UIColor.white
             currentPosition = 0
+            buttons[currentPosition].backgroundColor = UIColor.gray
             self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }
     }
     
-    @IBAction func myMessagesButton(_ sender: Any) {
+    @IBAction func viewMyMessages(_ sender: Any) {
         if currentPosition != 1 {
+            buttons[currentPosition].backgroundColor = UIColor.white
             currentPosition = 1
+            buttons[currentPosition].backgroundColor = UIColor.gray
             self.scrollView.setContentOffset(CGPoint(x: 1 * screen_width, y: 0), animated: true)
         }
     }
