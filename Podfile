@@ -8,4 +8,5 @@ target 'BuySellApp' do
   # Pods for BuySellApp
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'DropDown'
 end

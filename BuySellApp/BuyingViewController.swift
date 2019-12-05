@@ -9,11 +9,19 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import DropDown
 
 class BuyingViewController: UITableViewController {
-    
+
     var items: [Item] = []
     var itemId: String = ""
+    let categoryDropDown = DropDown()
+
+    @IBOutlet weak var categoryButton: UIButton!
+    
+    @IBAction func showCategoryDropDown(_ sender: Any) {
+        categoryDropDown.show()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,13 @@ class BuyingViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 120
+        
+        // dropdown menu of categories
+        categoryDropDown.anchorView = view
+        categoryDropDown.dataSource = ["Car", "Motorcycle", "Truck"]
+        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
