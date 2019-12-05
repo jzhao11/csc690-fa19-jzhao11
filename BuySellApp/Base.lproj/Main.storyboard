@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,7 +54,6 @@
         <!--Navigation-->
         <scene sceneID="KJt-vY-46R">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mbf-BH-Ytv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="BAa-eW-57O" userLabel="Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Buy" id="r7P-NH-yKc" userLabel="Buy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zsu-hQ-rJH">
@@ -66,6 +64,7 @@
                         <segue destination="Qkz-6a-0t1" kind="relationship" relationship="rootViewController" id="m8P-GN-hFA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbf-BH-Ytv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1801" y="86"/>
         </scene>
@@ -178,14 +177,13 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signIn:" destination="4zl-vG-mSA" eventType="touchUpInside" id="FYP-BT-edo"/>
-                                    <segue destination="2F0-ET-d0u" kind="show" id="b1n-Nc-aYP"/>
+                                    <segue destination="QB4-oj-u0M" kind="show" id="2Dz-Eb-jNx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pzg-Nb-tpP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" id="3tt-Du-7b5"/>
                     <navigationItem key="navigationItem" id="ajr-YD-Jwp"/>
                     <connections>
                         <outlet property="passwordTextField" destination="Ak4-ae-h2J" id="ubK-bX-Ah1"/>
@@ -198,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="93" y="-721"/>
         </scene>
-        <!--My-->
+        <!--Navigation-->
         <scene sceneID="GO0-Ee-0K0">
             <objects>
-                <navigationController id="PSA-Ba-Zr5" sceneMemberID="viewController">
+                <navigationController id="PSA-Ba-Zr5" userLabel="Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My" id="8rl-GO-TWf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AM9-xE-UYo">
@@ -243,7 +241,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqn-A4-ujY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="-721"/>
+            <point key="canvasLocation" x="1967" y="-1043"/>
+        </scene>
+        <!--My Messages View Controller-->
+        <scene sceneID="9ye-Gu-lUZ">
+            <objects>
+                <tableViewController id="I3D-dz-Dme" customClass="MyMessagesViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GwR-x6-Zwf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EAZ-cp-cDf">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAZ-cp-cDf" id="8ci-JS-R9J">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="I3D-dz-Dme" id="eAU-PB-lxH"/>
+                            <outlet property="delegate" destination="I3D-dz-Dme" id="E3V-nK-JUR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7YT-z3-3iC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="86i-vc-hOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-377"/>
         </scene>
         <!--Buying View Controller-->
         <scene sceneID="FAV-Ec-zRj">
@@ -253,30 +280,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dtn-tf-7lc">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oST-8D-QyU">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                            <cells>
-                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tai-qj-yvK">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Ch-67-TIg">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </collectionViewCellContentView>
-                                </collectionViewCell>
-                            </cells>
-                        </collectionView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wqk-G7-AgB" customClass="ItemViewCell" customModule="BuySellApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqk-G7-AgB" id="05B-Oj-Olb">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -301,7 +307,50 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ul-qF-ltm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="86"/>
+            <point key="canvasLocation" x="-855.07246376811599" y="85.714285714285708"/>
+        </scene>
+        <!--My DashBoard View Controller-->
+        <scene sceneID="8c2-ZL-dcV">
+            <objects>
+                <viewController id="QB4-oj-u0M" userLabel="My DashBoard View Controller" customClass="MyDashBoardViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DBM-gX-4BX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwT-Kd-1C1">
+                                <rect key="frame" x="0.0" y="136" width="414" height="677"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4LI-lg-iOR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="A4E-Gq-aOx"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4d-o0-nwy">
+                                <rect key="frame" x="207" y="88" width="207" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Messages"/>
+                                <connections>
+                                    <action selector="myMessagesButton:" destination="QB4-oj-u0M" eventType="touchUpInside" id="2U5-vf-9tv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-Of-giI">
+                                <rect key="frame" x="0.0" y="88" width="207" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Items"/>
+                                <connections>
+                                    <action selector="myItemsButton:" destination="QB4-oj-u0M" eventType="touchUpInside" id="JOQ-gv-dx8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7vF-fW-1OI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n4A-q4-TrP"/>
+                    <connections>
+                        <outlet property="scrollView" destination="XwT-Kd-1C1" id="Cpv-TR-zFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbn-UG-omx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-721"/>
         </scene>
     </scenes>
 </document>

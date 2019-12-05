@@ -1,5 +1,5 @@
 //
-//  MyItemsViewController.swift
+//  MyMessagesViewController.swift
 //  BuySellApp
 //
 //  Created by Mac on 12/4/19.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MyItemsViewController: UITableViewController {
+class MyMessagesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.green
+        view.backgroundColor = UIColor.yellow
     }
 }
