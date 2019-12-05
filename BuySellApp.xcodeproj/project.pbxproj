@@ -83,8 +83,8 @@
 		0484D93323847D4B003BA3DA /* BuySellApp */ = {
 			isa = PBXGroup;
 			children = (
-				0419A5D123887A840021C36E /* BuyingViewController.swift */,
 				042E3B8623990FE200B76BE6 /* RootTabBarController.swift */,
+				0419A5D123887A840021C36E /* BuyingViewController.swift */,
 				04C906442385F93600A58153 /* BuyingDetailViewController.swift */,
 				0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */,
 				04DB74B3238743960094909A /* SignInViewController.swift */,

@@ -67,7 +67,8 @@ class BuyingViewController: UITableViewController {
             let url = URL(string: "http://127.0.0.1:8888/buysell/\(item.titleImage)"),
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
-            cell.imageView?.image = image
+//            cell.imageView?.image = image
+            cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 125, height: 100))
         }
         
         return cell
@@ -116,5 +117,15 @@ class BuyingViewController: UITableViewController {
             }
             self.tableView.reloadData()
         }
+    }
+}
+
+extension UIImage {
+    func resizeImage(CGSize : CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSize, false, UIScreen.main.scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: CGSize.width, height: CGSize.height))
+        let resizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return resizedImage
     }
 }

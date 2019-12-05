@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SignInViewController: UIViewController {
     
@@ -16,6 +18,22 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     @IBAction func signIn(_ sender: Any) {
+        signInButton.isEnabled = false
+        let url = "http://127.0.0.1:8888/buysell/api/user/signin"
+        let params = [
+            "username": usernameTextField.text,
+            "password": passwordTextField.text
+        ]
+        Alamofire.request(url, method: .post, parameters: params as Parameters).responseJSON { (response) -> Void in
+            guard
+                let data = response.result.value
+            else {
+                return
+            }
+            
+            let jsonDict = JSON(data)
+            print(jsonDict)
+        }
     }
     
     override func viewDidLoad() {
