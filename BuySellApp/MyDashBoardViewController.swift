@@ -13,13 +13,17 @@ let screen_height = UIScreen.main.bounds.size.height
 
 class MyDashBoardViewController: UIViewController {
 
+    var currentPosition = 0
+    var buttons: [UIButton] = []
+    
     @IBOutlet weak var myItemsButton: UIButton!
     @IBOutlet weak var myMessagesButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var currentPosition = 0
-    var buttons: [UIButton] = []
-
+    @IBAction func signOut(_ sender: Any) {
+        performSegue(withIdentifier: "signOut", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let myItemsViewController: MyItemsViewController = MyItemsViewController()

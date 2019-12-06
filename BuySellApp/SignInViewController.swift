@@ -44,6 +44,9 @@ class SignInViewController: UIViewController {
         signInButton.backgroundColor = UIColor(red: 0x28 / 0xFF, green: 0xA7 / 0xFF, blue: 0x45 / 0xFF, alpha: 1.0)
         signInButton.setTitleColor(UIColor.white, for: .normal)
         segment.selectedSegmentIndex = 0
+        
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
     }
     
     func segmentDidChange() {}

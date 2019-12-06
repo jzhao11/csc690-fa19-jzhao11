@@ -12,25 +12,43 @@
             <objects>
                 <viewController storyboardIdentifier="BuyingDetailViewController" id="CZn-eq-jH5" customClass="BuyingDetailViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBf-fN-22B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="imX-tm-v7w">
+                                <rect key="frame" x="57" y="120" width="300" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7v-k9-6z1">
-                                <rect key="frame" x="102.92359766414302" y="229" width="200.00000000000003" height="80"/>
+                                <rect key="frame" x="87" y="380" width="240" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhV-id-Plt">
-                                <rect key="frame" x="102.92359766414302" y="402" width="199.99999999999991" height="80.000000000000114"/>
+                                <rect key="frame" x="87" y="460" width="240" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7u-H6-hce">
-                                <rect key="frame" x="102.92359766414302" y="564" width="199.99999999999991" height="79.999999999999886"/>
+                                <rect key="frame" x="87" y="540" width="240" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGc-v4-ko2">
+                                <rect key="frame" x="87" y="620" width="240" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Posted At" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INp-NQ-TYz">
+                                <rect key="frame" x="87" y="740" width="240" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -42,14 +60,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="PDl-ft-bWR"/>
                     <connections>
+                        <outlet property="createdAtLabel" destination="INp-NQ-TYz" id="Jsl-Sl-7ce"/>
+                        <outlet property="descriptionLabel" destination="AGc-v4-ko2" id="aVq-6e-GYh"/>
                         <outlet property="priceLabel" destination="n7u-H6-hce" id="iUB-BE-GKf"/>
                         <outlet property="sellerLabel" destination="nhV-id-Plt" id="CaO-Ts-m6X"/>
+                        <outlet property="titleImageView" destination="imX-tm-v7w" id="prp-0M-Oco"/>
                         <outlet property="titleLabel" destination="V7v-k9-6z1" id="uQP-Eb-qh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkn-kr-kcl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="86"/>
+            <point key="canvasLocation" x="92.753623188405811" y="85.714285714285708"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="KJt-vY-46R">
@@ -57,7 +78,7 @@
                 <navigationController id="BAa-eW-57O" userLabel="Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Buy" id="r7P-NH-yKc" userLabel="Buy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zsu-hQ-rJH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -73,7 +94,7 @@
             <objects>
                 <viewController id="jyt-ll-YOm" userLabel="Selling View Controller" customClass="SellingViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YHf-zj-zoV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPF-yz-Zzw">
@@ -113,6 +134,7 @@
         <scene sceneID="Hvg-FU-C5r">
             <objects>
                 <navigationController id="7zF-BX-aIi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="guZ-1Y-dVH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UmR-ZT-2yw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -129,6 +151,7 @@
         <scene sceneID="L1s-hH-5rL">
             <objects>
                 <tabBarController id="V1G-BB-GjT" customClass="RootTabBarController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G4j-hn-aIV"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7A2-AT-q2G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,7 +172,7 @@
             <objects>
                 <viewController id="4zl-vG-mSA" userLabel="SignIn View Controller" customClass="SignInViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IXP-x3-MoC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuc-6X-muO">
@@ -192,7 +215,6 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signIn:" destination="4zl-vG-mSA" eventType="touchUpInside" id="FYP-BT-edo"/>
-                                    <segue destination="V1G-BB-GjT" kind="show" id="Msk-Pt-G9g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -205,11 +227,12 @@
                         <outlet property="segment" destination="kmm-SF-lfD" id="idB-M8-IIT"/>
                         <outlet property="signInButton" destination="Evi-uM-2p7" id="kZc-Bn-BAO"/>
                         <outlet property="usernameTextField" destination="kBY-oY-574" id="8Av-y9-x4z"/>
+                        <segue destination="V1G-BB-GjT" kind="show" identifier="signIn" id="9gZ-ub-cHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROO-df-9hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2762" y="-721"/>
+            <point key="canvasLocation" x="-1801" y="-1544"/>
         </scene>
         <!--My Items View Controller-->
         <scene sceneID="ay9-cm-0Dc">
@@ -274,7 +297,7 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Qkz-6a-0t1" customClass="BuyingViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hu8-Yu-Rov">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -296,7 +319,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="s1T-uD-ony">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FAH-kl-Mui">
-                                <rect key="frame" x="20" y="7" width="75" height="30"/>
+                                <rect key="frame" x="20" y="13" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Categories"/>
                                 <connections>
@@ -307,7 +330,7 @@
                         <rightBarButtonItems>
                             <barButtonItem width="50" style="plain" id="GsT-8V-RC3">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fS2-Rr-yge">
-                                    <rect key="frame" x="344" y="7" width="50" height="30"/>
+                                    <rect key="frame" x="344" y="13" width="50" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Search"/>
                                     <connections>
@@ -317,7 +340,7 @@
                             </barButtonItem>
                             <barButtonItem width="200" style="plain" id="J0K-NO-P9Q">
                                 <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="dnh-vS-Ekf">
-                                    <rect key="frame" x="201" y="5" width="135" height="34"/>
+                                    <rect key="frame" x="201" y="11" width="135" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -345,7 +368,7 @@
             <objects>
                 <viewController id="QB4-oj-u0M" userLabel="My DashBoard View Controller" customClass="MyDashBoardViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DBM-gX-4BX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwT-Kd-1C1">
@@ -354,20 +377,28 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="4LI-lg-iOR"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="A4E-Gq-aOx"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4d-o0-nwy">
-                                <rect key="frame" x="207" y="88" width="207" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-Of-giI">
+                                <rect key="frame" x="0.0" y="88" width="138" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Items"/>
+                                <connections>
+                                    <action selector="viewMyItems:" destination="QB4-oj-u0M" eventType="touchUpInside" id="wgq-3j-SvM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4d-o0-nwy" userLabel="My Messages Button">
+                                <rect key="frame" x="138" y="88" width="138" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Messages"/>
                                 <connections>
                                     <action selector="viewMyMessages:" destination="QB4-oj-u0M" eventType="touchUpInside" id="Tm8-Ju-b12"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-Of-giI">
-                                <rect key="frame" x="0.0" y="88" width="207" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amD-FP-nem" userLabel="Sign Out Button">
+                                <rect key="frame" x="276" y="88" width="138" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="My Items"/>
+                                <state key="normal" title="Sign Out"/>
                                 <connections>
-                                    <action selector="viewMyItems:" destination="QB4-oj-u0M" eventType="touchUpInside" id="wgq-3j-SvM"/>
+                                    <action selector="signOut:" destination="QB4-oj-u0M" eventType="touchUpInside" id="wZK-6e-dd3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -378,13 +409,18 @@
                     <navigationItem key="navigationItem" id="n4A-q4-TrP"/>
                     <connections>
                         <outlet property="myItemsButton" destination="xP9-Of-giI" id="cAe-me-C9D"/>
-                        <outlet property="myMessagesButton" destination="Z4d-o0-nwy" id="L0Z-Ju-eOc"/>
+                        <outlet property="myMessagesButton" destination="Z4d-o0-nwy" id="drG-6u-kh3"/>
                         <outlet property="scrollView" destination="XwT-Kd-1C1" id="Cpv-TR-zFO"/>
+                        <segue destination="4zl-vG-mSA" kind="show" identifier="signOut" id="zfV-46-u1E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbn-UG-omx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855.07246376811599" y="-721.20535714285711"/>
+            <point key="canvasLocation" x="-855" y="-721"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9gZ-ub-cHw"/>
+        <segue reference="zfV-46-u1E"/>
+    </inferredMetricsTieBreakers>
 </document>
