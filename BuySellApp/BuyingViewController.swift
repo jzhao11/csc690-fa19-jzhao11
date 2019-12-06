@@ -38,14 +38,14 @@ class BuyingViewController: UITableViewController {
     @IBAction func searchItemsByKeyword(_ sender: Any) {
         let keyword = searchTextField.text ?? ""
         let urlToReadByKeyWord = Item.getUrlToReadByKeyword(keyword: keyword)
-        loadData(url: urlToReadByKeyWord)
+        loadItems(url: urlToReadByKeyWord)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCells()
         let urlToReadAll = Item.getUrlToReadAll()
-        loadData(url: urlToReadAll)
+        loadItems(url: urlToReadAll)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 120
@@ -56,7 +56,7 @@ class BuyingViewController: UITableViewController {
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             let categoryId = self.categories[index].id
             let urlToReadByCategory = Item.getUrlToReadByCategory(categoryId: categoryId)
-            self.loadData(url: urlToReadByCategory)
+            self.loadItems(url: urlToReadByCategory)
         }
     }
     
@@ -110,7 +110,7 @@ class BuyingViewController: UITableViewController {
         self.tableView.register(itemViewCell, forCellReuseIdentifier: "ItemViewCell")
     }
     
-    func loadData(url: String) {
+    func loadItems(url: String) {
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
             guard
                 let data = response.result.value

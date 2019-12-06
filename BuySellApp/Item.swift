@@ -18,6 +18,8 @@ class Item {
     let description: String
     let seller: String
     let createdAt: String
+//    static let commonUrl: String = "http://127.0.0.1:8888/buysell/"
+    static let commonUrl: String = "http://52.53.151.37/buysell/"
 
     init(id: String, title: String, img: String, price: Double, description: String, seller: String, createdAt: String) {
         self.id = id
@@ -40,19 +42,19 @@ class Item {
     }
     
     static func getUrlToReadAll() -> String {
-        return "http://127.0.0.1:8888/buysell/api/item/readall"
+        return commonUrl + "api/item/readall"
     }
     
     static func getUrlToReadByCategory(categoryId: String) -> String {
-        return "http://127.0.0.1:8888/buysell/api/item/readbycategory?categoryid=" + categoryId
+        return commonUrl + "api/item/readbycategory?categoryid=" + categoryId
     }
     
     static func getUrlToReadByKeyword(keyword: String) -> String {
-        return "http://127.0.0.1:8888/buysell/api/item/readbykeyword?keyword=" + keyword
+        return commonUrl + "api/item/readbykeyword?keyword=" + keyword
     }
     
     static func getUrlToReadImage(imagePath: String) -> String {
-        return "http://127.0.0.1:8888/buysell/" + imagePath
+        return commonUrl + imagePath
     }
 }
 
