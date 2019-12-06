@@ -311,7 +311,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Search"/>
                                     <connections>
-                                        <action selector="searchItems:" destination="Qkz-6a-0t1" eventType="touchUpInside" id="A7n-5v-s4R"/>
+                                        <action selector="searchItemsByKeyword:" destination="Qkz-6a-0t1" eventType="touchUpInside" id="GqE-aM-4oC"/>
                                     </connections>
                                 </button>
                             </barButtonItem>

@@ -34,9 +34,13 @@ class BuyingViewController: UITableViewController {
     @IBAction func showCategoryDropDown(_ sender: Any) {
         categoryDropDown.show()
     }
-    @IBAction func searchItems(_ sender: Any) {
+//    @IBAction func searchItems(_ sender: Any) {
+//        let keyword = searchTextField.text ?? ""
+//        print(keyword)
+//    }
+    @IBAction func searchItemsByKeyword(_ sender: Any) {
         let keyword = searchTextField.text ?? ""
-        print(keyword)
+        searchItemsByKeyword(keyword: keyword)
     }
     
     override func viewDidLoad() {
@@ -64,10 +68,49 @@ class BuyingViewController: UITableViewController {
         categoryDropDown.anchorView = view
         categoryDropDown.dataSource = categories.map {return $0.title}
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("category id: \(self.categories[index].id)")
+            let categoryId = self.categories[index].id
+            self.searchItemsByCategory(categoryId: categoryId)
         }
     }
-
+    
+    func searchItemsByCategory(categoryId: String) {
+        let url = "http://127.0.0.1:8888/buysell/api/item/readbycategory?categoryid=" + categoryId
+        Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
+            guard
+                let data = response.result.value
+            else {
+                return
+            }
+            
+            self.items = []
+            let jsonArr = JSON(data)
+            for jsonDict in jsonArr.arrayValue {
+                self.items.append(Item(jsonDict: jsonDict))
+            }
+            self.tableView.reloadData()
+        }
+        tableView.dataSource = self
+    }
+    
+    func searchItemsByKeyword(keyword: String) {
+        let url = "http://127.0.0.1:8888/buysell/api/item/readbykeyword?keyword=" + keyword
+        Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
+            guard
+                let data = response.result.value
+            else {
+                return
+            }
+            
+            self.items = []
+            let jsonArr = JSON(data)
+            for jsonDict in jsonArr.arrayValue {
+                self.items.append(Item(jsonDict: jsonDict))
+            }
+            self.tableView.reloadData()
+        }
+        tableView.dataSource = self
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
