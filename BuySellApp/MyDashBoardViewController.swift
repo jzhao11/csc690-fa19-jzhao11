@@ -8,13 +8,13 @@
 
 import UIKit
 
-let screen_width = UIScreen.main.bounds.size.width
-let screen_height = UIScreen.main.bounds.size.height
-
 class MyDashBoardViewController: UIViewController {
 
-    var currentPosition = 0
+    var currentPosition: Int = 0
     var buttons: [UIButton] = []
+    let grayColor: UIColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
+    let screenWidth = UIScreen.main.bounds.size.width
+    let screenHeight = UIScreen.main.bounds.size.height
     
     @IBOutlet weak var myItemsButton: UIButton!
     @IBOutlet weak var myMessagesButton: UIButton!
@@ -28,22 +28,22 @@ class MyDashBoardViewController: UIViewController {
         super.viewDidLoad()
         let myItemsViewController: MyItemsViewController = MyItemsViewController()
         let myMessagesViewController: MyMessagesViewController = MyMessagesViewController()
-        myItemsViewController.view.frame = CGRect(x: 0, y: 0, width: screen_width, height: screen_height)
-        myMessagesViewController.view.frame = CGRect(x: screen_width, y: 0, width: screen_width, height: screen_height)
+        myItemsViewController.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        myMessagesViewController.view.frame = CGRect(x: screenWidth, y: 0, width: screenWidth, height: screenHeight)
         self.scrollView.addSubview(myItemsViewController.view)
         self.scrollView.addSubview(myMessagesViewController.view)
-        self.scrollView.contentSize = CGSize(width: 2 * screen_width, height: 0)
+        self.scrollView.contentSize = CGSize(width: 2 * screenWidth, height: 0)
         
         buttons.append(myItemsButton)
         buttons.append(myMessagesButton)
-        buttons[currentPosition].backgroundColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
+        buttons[currentPosition].backgroundColor = grayColor
     }
     
     @IBAction func viewMyItems(_ sender: Any) {
         if currentPosition != 0 {
             buttons[currentPosition].backgroundColor = UIColor.white
             currentPosition = 0
-            buttons[currentPosition].backgroundColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
+            buttons[currentPosition].backgroundColor = grayColor
             self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }
     }
@@ -52,8 +52,8 @@ class MyDashBoardViewController: UIViewController {
         if currentPosition != 1 {
             buttons[currentPosition].backgroundColor = UIColor.white
             currentPosition = 1
-            buttons[currentPosition].backgroundColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
-            self.scrollView.setContentOffset(CGPoint(x: 1 * screen_width, y: 0), animated: true)
+            buttons[currentPosition].backgroundColor = grayColor
+            self.scrollView.setContentOffset(CGPoint(x: 1 * screenWidth, y: 0), animated: true)
         }
     }
 }

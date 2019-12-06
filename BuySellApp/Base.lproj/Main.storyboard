@@ -405,13 +405,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7vF-fW-1OI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My" id="EIf-bA-rpz"/>
+                    <tabBarItem key="tabBarItem" title="Me" id="EIf-bA-rpz"/>
                     <navigationItem key="navigationItem" id="n4A-q4-TrP"/>
                     <connections>
                         <outlet property="myItemsButton" destination="xP9-Of-giI" id="cAe-me-C9D"/>
                         <outlet property="myMessagesButton" destination="Z4d-o0-nwy" id="drG-6u-kh3"/>
                         <outlet property="scrollView" destination="XwT-Kd-1C1" id="Cpv-TR-zFO"/>
-                        <segue destination="4zl-vG-mSA" kind="show" identifier="signOut" id="zfV-46-u1E"/>
+                        <segue destination="4zl-vG-mSA" kind="show" identifier="signOut" id="BvB-Z7-pt4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbn-UG-omx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -420,7 +420,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9gZ-ub-cHw"/>
-        <segue reference="zfV-46-u1E"/>
+        <segue reference="BvB-Z7-pt4"/>
     </inferredMetricsTieBreakers>
 </document>
