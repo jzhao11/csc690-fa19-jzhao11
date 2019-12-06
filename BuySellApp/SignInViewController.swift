@@ -18,11 +18,10 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     @IBAction func signIn(_ sender: Any) {
-        signInButton.isEnabled = false
         let url = "http://127.0.0.1:8888/buysell/api/user/signin"
         let params = [
-            "username": usernameTextField.text,
-            "password": passwordTextField.text
+            "username": usernameTextField.text ?? "",
+            "password": passwordTextField.text ?? ""
         ]
         Alamofire.request(url, method: .post, parameters: params as Parameters).responseJSON { (response) -> Void in
             guard
@@ -32,7 +31,11 @@ class SignInViewController: UIViewController {
             }
             
             let jsonDict = JSON(data)
-            print(jsonDict)
+            if jsonDict["id"].stringValue != "" {
+                self.performSegue(withIdentifier: "signIn", sender: self)
+            } else {
+                print(jsonDict)
+            }
         }
     }
     
