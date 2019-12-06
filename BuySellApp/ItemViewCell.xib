@@ -42,7 +42,6 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9lJ-5x-Lbj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2i8-OF-gNW"/>
                     <constraint firstItem="9lJ-5x-Lbj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="dgH-8z-IIq"/>
                 </constraints>
             </tableViewCellContentView>
@@ -52,7 +51,7 @@
                 <outlet property="sellerLabel" destination="7ZA-bP-Tn3" id="Sm9-r2-1TT"/>
                 <outlet property="titleLabel" destination="CbL-tK-56M" id="V3q-Lp-OlW"/>
             </connections>
-            <point key="canvasLocation" x="-607.24637681159425" y="127.90178571428571"/>
+            <point key="canvasLocation" x="-741" y="127"/>
         </tableViewCell>
     </objects>
 </document>

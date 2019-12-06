@@ -76,7 +76,8 @@ class BuyingViewController: UITableViewController {
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
 //            cell.imageView?.image = image
-            cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 125, height: 100))
+            cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 125
+                , height: 100))
         }
         
         return cell
