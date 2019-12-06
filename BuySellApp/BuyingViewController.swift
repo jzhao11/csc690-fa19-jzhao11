@@ -16,9 +16,19 @@ class BuyingViewController: UITableViewController {
     var items: [Item] = []
     var itemId: String = ""
     let categoryDropDown = DropDown()
+    let categories: [Category] = [
+        Category(id: "", title: ""),
+        Category(id: "", title: "All"),
+        Category(id: "1", title: "Clothes"),
+        Category(id: "20", title: "Entertainment"),
+        Category(id: "9", title: "Books"),
+        Category(id: "12", title: "Electronic Devices"),
+        Category(id: "15", title: "Furniture"),
+        Category(id: "33", title: "Fishes")
+    ]
 
     @IBOutlet weak var categoryButton: UIButton!
-    
+        
     @IBAction func showCategoryDropDown(_ sender: Any) {
         categoryDropDown.show()
     }
@@ -46,9 +56,9 @@ class BuyingViewController: UITableViewController {
         
         // dropdown menu of categories
         categoryDropDown.anchorView = view
-        categoryDropDown.dataSource = ["Car", "Motorcycle", "Truck"]
+        categoryDropDown.dataSource = categories.map {return $0.title}
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
+            print("category id: \(self.categories[index].id)")
         }
     }
 
