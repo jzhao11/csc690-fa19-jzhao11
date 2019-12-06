@@ -199,7 +199,7 @@
                                 <rect key="frame" x="131" y="415" width="150" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kmm-SF-lfD">
                                 <rect key="frame" x="84" y="95" width="250" height="32"/>
@@ -420,6 +420,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9gZ-ub-cHw"/>
         <segue reference="BvB-Z7-pt4"/>
     </inferredMetricsTieBreakers>
 </document>
