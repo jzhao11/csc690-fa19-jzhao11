@@ -32,14 +32,14 @@ class MyDashBoardViewController: UIViewController {
         
         buttons.append(myItemsButton)
         buttons.append(myMessagesButton)
-        buttons[currentPosition].backgroundColor = UIColor.gray
+        buttons[currentPosition].backgroundColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
     }
     
     @IBAction func viewMyItems(_ sender: Any) {
         if currentPosition != 0 {
             buttons[currentPosition].backgroundColor = UIColor.white
             currentPosition = 0
-            buttons[currentPosition].backgroundColor = UIColor.gray
+            buttons[currentPosition].backgroundColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
             self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }
     }
@@ -48,7 +48,7 @@ class MyDashBoardViewController: UIViewController {
         if currentPosition != 1 {
             buttons[currentPosition].backgroundColor = UIColor.white
             currentPosition = 1
-            buttons[currentPosition].backgroundColor = UIColor.gray
+            buttons[currentPosition].backgroundColor = UIColor(red: 0xDD / 0xFF, green: 0xDD / 0xFF, blue: 0xDD / 0xFF, alpha: 1.0)
             self.scrollView.setContentOffset(CGPoint(x: 1 * screen_width, y: 0), animated: true)
         }
     }

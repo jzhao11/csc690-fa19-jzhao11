@@ -29,8 +29,14 @@ class BuyingViewController: UITableViewController {
 
     @IBOutlet weak var categoryButton: UIButton!
         
+    @IBOutlet weak var searchTextField: UITextField!
+    
     @IBAction func showCategoryDropDown(_ sender: Any) {
         categoryDropDown.show()
+    }
+    @IBAction func searchItems(_ sender: Any) {
+        let keyword = searchTextField.text ?? ""
+        print(keyword)
     }
     
     override func viewDidLoad() {

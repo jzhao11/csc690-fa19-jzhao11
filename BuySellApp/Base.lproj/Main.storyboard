@@ -310,11 +310,14 @@
                                     <rect key="frame" x="344" y="7" width="50" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Search"/>
+                                    <connections>
+                                        <action selector="searchItems:" destination="Qkz-6a-0t1" eventType="touchUpInside" id="A7n-5v-s4R"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem width="200" style="plain" id="J0K-NO-P9Q">
                                 <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="dnh-vS-Ekf">
-                                    <rect key="frame" x="110" y="5" width="226" height="34"/>
+                                    <rect key="frame" x="201" y="5" width="135" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -329,6 +332,7 @@
                     </refreshControl>
                     <connections>
                         <outlet property="categoryButton" destination="FAH-kl-Mui" id="xHE-h9-qgu"/>
+                        <outlet property="searchTextField" destination="dnh-vS-Ekf" id="E9R-HU-crG"/>
                         <segue destination="CZn-eq-jH5" kind="show" id="BwD-um-jFL"/>
                     </connections>
                 </tableViewController>
