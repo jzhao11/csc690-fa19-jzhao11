@@ -38,5 +38,21 @@ class Item {
         self.seller = jsonDict["username"].stringValue
         self.createdAt = jsonDict["created_at"].stringValue
     }
+    
+    static func getUrlToReadAll() -> String {
+        return "http://127.0.0.1:8888/buysell/api/item/readall"
+    }
+    
+    static func getUrlToReadByCategory(categoryId: String) -> String {
+        return "http://127.0.0.1:8888/buysell/api/item/readbycategory?categoryid=" + categoryId
+    }
+    
+    static func getUrlToReadByKeyword(keyword: String) -> String {
+        return "http://127.0.0.1:8888/buysell/api/item/readbykeyword?keyword=" + keyword
+    }
+    
+    static func getUrlToReadImage(imagePath: String) -> String {
+        return "http://127.0.0.1:8888/buysell/" + imagePath
+    }
 }
 

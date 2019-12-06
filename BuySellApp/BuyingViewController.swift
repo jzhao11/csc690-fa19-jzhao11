@@ -34,81 +34,30 @@ class BuyingViewController: UITableViewController {
     @IBAction func showCategoryDropDown(_ sender: Any) {
         categoryDropDown.show()
     }
-//    @IBAction func searchItems(_ sender: Any) {
-//        let keyword = searchTextField.text ?? ""
-//        print(keyword)
-//    }
+
     @IBAction func searchItemsByKeyword(_ sender: Any) {
         let keyword = searchTextField.text ?? ""
-        searchItemsByKeyword(keyword: keyword)
+        let urlToReadByKeyWord = Item.getUrlToReadByKeyword(keyword: keyword)
+        loadData(url: urlToReadByKeyWord)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCells()
-        let url = "http://127.0.0.1:8888/buysell/api/item/readall"
-        Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
-            guard
-                let data = response.result.value
-            else {
-                return
-            }
-            
-            let jsonArr = JSON(data)
-            for jsonDict in jsonArr.arrayValue {
-                self.items.append(Item(jsonDict: jsonDict))
-            }
-            self.tableView.reloadData()
-        }
-        tableView.delegate = self
+        let urlToReadAll = Item.getUrlToReadAll()
+        loadData(url: urlToReadAll)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 120
-        
+
         // dropdown menu of categories
         categoryDropDown.anchorView = view
         categoryDropDown.dataSource = categories.map {return $0.title}
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             let categoryId = self.categories[index].id
-            self.searchItemsByCategory(categoryId: categoryId)
+            let urlToReadByCategory = Item.getUrlToReadByCategory(categoryId: categoryId)
+            self.loadData(url: urlToReadByCategory)
         }
-    }
-    
-    func searchItemsByCategory(categoryId: String) {
-        let url = "http://127.0.0.1:8888/buysell/api/item/readbycategory?categoryid=" + categoryId
-        Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
-            guard
-                let data = response.result.value
-            else {
-                return
-            }
-            
-            self.items = []
-            let jsonArr = JSON(data)
-            for jsonDict in jsonArr.arrayValue {
-                self.items.append(Item(jsonDict: jsonDict))
-            }
-            self.tableView.reloadData()
-        }
-        tableView.dataSource = self
-    }
-    
-    func searchItemsByKeyword(keyword: String) {
-        let url = "http://127.0.0.1:8888/buysell/api/item/readbykeyword?keyword=" + keyword
-        Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
-            guard
-                let data = response.result.value
-            else {
-                return
-            }
-            
-            self.items = []
-            let jsonArr = JSON(data)
-            for jsonDict in jsonArr.arrayValue {
-                self.items.append(Item(jsonDict: jsonDict))
-            }
-            self.tableView.reloadData()
-        }
-        tableView.dataSource = self
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,7 +72,7 @@ class BuyingViewController: UITableViewController {
         cell.priceLabel.text = "Price: $\(item.price)"
         
         if
-            let url = URL(string: "http://127.0.0.1:8888/buysell/\(item.titleImage)"),
+            let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
 //            cell.imageView?.image = image
@@ -161,8 +110,7 @@ class BuyingViewController: UITableViewController {
         self.tableView.register(itemViewCell, forCellReuseIdentifier: "ItemViewCell")
     }
     
-    func loadData() {
-        let url = "http://127.0.0.1:8888/buysell/api/item/readall"
+    func loadData(url: String) {
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
             guard
                 let data = response.result.value
@@ -170,6 +118,7 @@ class BuyingViewController: UITableViewController {
                 return
             }
             
+            self.items = []
             let jsonArr = JSON(data)
             for jsonDict in jsonArr.arrayValue {
                 self.items.append(Item(jsonDict: jsonDict))
