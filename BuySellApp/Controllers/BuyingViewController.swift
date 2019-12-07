@@ -16,16 +16,7 @@ class BuyingViewController: UITableViewController {
     var items: [Item] = []
     var itemId: String = ""
     let categoryDropDown = DropDown()
-    let categories: [Category] = [
-        Category(id: "", title: ""),
-        Category(id: "", title: "All"),
-        Category(id: "1", title: "Clothes"),
-        Category(id: "20", title: "Entertainment"),
-        Category(id: "9", title: "Books"),
-        Category(id: "12", title: "Electronic Devices"),
-        Category(id: "15", title: "Furniture"),
-        Category(id: "33", title: "Fishes")
-    ]
+    let categories: [Category] = Category.getCurrentCategories()
 
     @IBOutlet weak var categoryButton: UIButton!
         
@@ -68,8 +59,8 @@ class BuyingViewController: UITableViewController {
         let item = items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell", for: indexPath) as! ItemViewCell
         cell.titleLabel.attributedText = Item.formatAttributedText(str1: "Item: ", str2: "\(item.title)")
-        cell.sellerLabel.attributedText = Item.formatAttributedText(str1: "Seller: ", str2: "\(item.seller)")
         cell.priceLabel.attributedText = Item.formatAttributedText(str1: "Price: ", str2: "$\(item.price)")
+        cell.infoLabel.attributedText = Item.formatAttributedText(str1: "Seller: ", str2: "\(item.seller)")
         
         if
             let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
