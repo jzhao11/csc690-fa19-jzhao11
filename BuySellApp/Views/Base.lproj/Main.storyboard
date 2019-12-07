@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkn-kr-kcl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="85.714285714285708"/>
+            <point key="canvasLocation" x="-855" y="873"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="KJt-vY-46R">
@@ -171,12 +171,76 @@
                     <connections>
                         <segue destination="BAa-eW-57O" kind="relationship" relationship="viewControllers" id="Bm1-kJ-rRs"/>
                         <segue destination="jyt-ll-YOm" kind="relationship" relationship="viewControllers" id="67D-xD-HQb"/>
-                        <segue destination="QB4-oj-u0M" kind="relationship" relationship="viewControllers" id="LRN-vj-F3Q"/>
+                        <segue destination="EYj-2E-kfg" kind="relationship" relationship="viewControllers" id="ofr-KL-xsg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prE-4Z-hIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1801" y="-721"/>
+        </scene>
+        <!--My DashBoard View Controller-->
+        <scene sceneID="KMl-ke-JJP">
+            <objects>
+                <viewController id="EYj-2E-kfg" userLabel="My DashBoard View Controller" customClass="MyDashBoardViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HyW-7h-crx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cd-c6-n37">
+                                <rect key="frame" x="0.0" y="88" width="414" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-jU-CbQ">
+                                <rect key="frame" x="0.0" y="256" width="414" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-Qg-vwP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="My Items"/>
+                                        <connections>
+                                            <segue destination="2F0-ET-d0u" kind="show" id="UNA-cs-JLS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82D-Hd-N23">
+                                <rect key="frame" x="0.0" y="424" width="414" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvg-3W-Pm4">
+                                        <rect key="frame" x="160" y="69" width="94" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="My Messages"/>
+                                        <connections>
+                                            <segue destination="I3D-dz-Dme" kind="show" id="rou-xn-RZD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-SG-FDu">
+                                <rect key="frame" x="0.0" y="592" width="414" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOut:" destination="EYj-2E-kfg" eventType="touchUpInside" id="Fxr-qp-ffg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bhy-LQ-IHt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gcl-hy-fsl"/>
+                    <connections>
+                        <segue destination="4zl-vG-mSA" kind="show" identifier="signOut" id="iQo-q3-UIO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wIl-CG-lzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855.07246376811599" y="-721.20535714285711"/>
         </scene>
         <!--SignIn View Controller-->
         <scene sceneID="7Gb-MP-MLV">
@@ -250,11 +314,11 @@
             <objects>
                 <tableViewController id="2F0-ET-d0u" customClass="MyItemsViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qQk-nx-Mt2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oWy-8U-eQ5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oWy-8U-eQ5" customClass="ItemViewCell" customModule="BuySellApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oWy-8U-eQ5" id="KoD-vL-Zdl">
@@ -272,14 +336,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqn-A4-ujY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-721"/>
+            <point key="canvasLocation" x="99" y="-1107"/>
         </scene>
         <!--My Messages View Controller-->
         <scene sceneID="9ye-Gu-lUZ">
             <objects>
                 <tableViewController id="I3D-dz-Dme" customClass="MyMessagesViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GwR-x6-Zwf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -301,7 +365,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86i-vc-hOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-721"/>
+            <point key="canvasLocation" x="99" y="-346"/>
         </scene>
         <!--Buying View Controller-->
         <scene sceneID="FAV-Ec-zRj">
@@ -374,12 +438,12 @@
             </objects>
             <point key="canvasLocation" x="-855.07246376811599" y="85.714285714285708"/>
         </scene>
-        <!--My DashBoard View Controller-->
+        <!--Test Panel View Controller-->
         <scene sceneID="8c2-ZL-dcV">
             <objects>
-                <viewController id="QB4-oj-u0M" userLabel="My DashBoard View Controller" customClass="MyDashBoardViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QB4-oj-u0M" userLabel="Test Panel View Controller" customClass="TestPanelViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DBM-gX-4BX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwT-Kd-1C1">
@@ -422,15 +486,14 @@
                         <outlet property="myItemsButton" destination="xP9-Of-giI" id="cAe-me-C9D"/>
                         <outlet property="myMessagesButton" destination="Z4d-o0-nwy" id="drG-6u-kh3"/>
                         <outlet property="scrollView" destination="XwT-Kd-1C1" id="Cpv-TR-zFO"/>
-                        <segue destination="4zl-vG-mSA" kind="show" identifier="signOut" id="BvB-Z7-pt4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbn-UG-omx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="-721"/>
+            <point key="canvasLocation" x="-855" y="-1544"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BvB-Z7-pt4"/>
+        <segue reference="iQo-q3-UIO"/>
     </inferredMetricsTieBreakers>
 </document>

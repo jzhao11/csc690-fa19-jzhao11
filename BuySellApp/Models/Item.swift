@@ -51,6 +51,10 @@ class Item {
         return commonUrl + "api/item/readbycategory?categoryid=" + categoryId
     }
     
+    static func getUrlToReadByUser(userId: String) -> String {
+        return commonUrl + "api/item/readbyuser?userid=" + userId
+    }
+    
     static func getUrlToReadByKeyword(keyword: String) -> String {
         return commonUrl + "api/item/readbykeyword?keyword=" + keyword
     }

@@ -15,6 +15,8 @@ class BuyingViewController: UITableViewController {
 
     var items: [Item] = []
     var itemId: String = ""
+    var dataSource: UITableViewDataSource?
+    var delegate: UITableViewDelegate?
     let categoryDropDown = DropDown()
     let categories: [Category] = Category.getCurrentCategories()
 
@@ -34,11 +36,13 @@ class BuyingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource = self
+        delegate = self
         self.registerTableViewCells()
         let urlToReadAll = Item.getUrlToReadAll()
         loadItems(url: urlToReadAll)
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.dataSource = dataSource
+        tableView.delegate = delegate
         tableView.rowHeight = 125
 
         // dropdown menu of categories
