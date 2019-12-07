@@ -48,7 +48,7 @@ class BuyingViewController: UITableViewController {
         loadItems(url: urlToReadAll)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 120
+        tableView.rowHeight = 125
 
         // dropdown menu of categories
         categoryDropDown.anchorView = view
@@ -76,8 +76,8 @@ class BuyingViewController: UITableViewController {
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
 //            cell.imageView?.image = image
-            cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 125
-                , height: 100))
+            cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
+                , height: 105))
         }
         
         return cell
