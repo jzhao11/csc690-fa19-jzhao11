@@ -13,7 +13,6 @@ import SwiftyJSON
 class BuyingDetailViewController: UIViewController {
     
     var itemId: String = ""
-    let nsAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
     
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -42,22 +41,11 @@ class BuyingDetailViewController: UIViewController {
                 self.titleImageView?.image = image?.resizeImage(CGSize: CGSize(width: 240, height: 180))
             }
 
-            self.titleLabel.attributedText = self.formatAttributedText(str1: "Item:\n", str2: "\(item.title)")
-            self.sellerLabel.attributedText = self.formatAttributedText(str1: "Seller:\n", str2: "\(item.seller)")
-            self.priceLabel.attributedText = self.formatAttributedText(str1: "Price:\n", str2: "$\(item.price)")
-            self.descriptionLabel.attributedText = self.formatAttributedText(str1: "Description:\n", str2: "\(item.description)")
-            self.createdAtLabel.attributedText = self.formatAttributedText(str1: "Posted At:\n", str2: "\(item.createdAt)")
+            self.titleLabel.attributedText = Item.formatAttributedText(str1: "Item:\n", str2: "\(item.title)")
+            self.sellerLabel.attributedText = Item.formatAttributedText(str1: "Seller:\n", str2: "\(item.seller)")
+            self.priceLabel.attributedText = Item.formatAttributedText(str1: "Price:\n", str2: "$\(item.price)")
+            self.descriptionLabel.attributedText = Item.formatAttributedText(str1: "Description:\n", str2: "\(item.description)")
+            self.createdAtLabel.attributedText = Item.formatAttributedText(str1: "Posted At:\n", str2: "\(item.createdAt)")
         }
-    }
-    
-    func formatAttributedText(str1: String, str2: String) -> NSAttributedString {
-        return concatStringsAsNSMutableAttributedString(str1: str1, str2: str2, attr1: nsAttributes, attr2: nil)
-    }
-    
-    func concatStringsAsNSMutableAttributedString (str1: String, str2: String, attr1: [NSAttributedString.Key : Any]?, attr2: [NSAttributedString.Key : Any]?) -> NSAttributedString {
-        let attrStr1 = NSMutableAttributedString(string: str1, attributes: attr1)
-        let attrStr2 = NSMutableAttributedString(string: str2, attributes: attr2)
-        attrStr1.append(attrStr2)
-        return attrStr1
     }
 }

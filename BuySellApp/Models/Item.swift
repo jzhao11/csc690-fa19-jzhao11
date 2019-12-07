@@ -18,8 +18,10 @@ class Item {
     let description: String
     let seller: String
     let createdAt: String
+    
+    //    static let commonUrl: String = "http://52.53.151.37/buysell/"
     static let commonUrl: String = "http://127.0.0.1:8888/buysell/"
-//    static let commonUrl: String = "http://52.53.151.37/buysell/"
+    static let itemNSAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
 
     init(id: String, title: String, img: String, price: Double, description: String, seller: String, createdAt: String) {
         self.id = id
@@ -55,6 +57,17 @@ class Item {
     
     static func getUrlToReadImage(imagePath: String) -> String {
         return commonUrl + imagePath
+    }
+    
+    static func formatAttributedText(str1: String, str2: String) -> NSAttributedString {
+        return concatStringsAsNSMutableAttributedString(str1: str1, str2: str2, attr1: Item.itemNSAttributes, attr2: nil)
+    }
+    
+    static func concatStringsAsNSMutableAttributedString (str1: String, str2: String, attr1: [NSAttributedString.Key : Any]?, attr2: [NSAttributedString.Key : Any]?) -> NSAttributedString {
+        let attrStr1 = NSMutableAttributedString(string: str1, attributes: attr1)
+        let attrStr2 = NSMutableAttributedString(string: str2, attributes: attr2)
+        attrStr1.append(attrStr2)
+        return attrStr1
     }
 }
 

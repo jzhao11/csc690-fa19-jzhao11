@@ -67,15 +67,14 @@ class BuyingViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell", for: indexPath) as! ItemViewCell
-        cell.titleLabel.text = "Item: \(item.title)"
-        cell.sellerLabel.text = "Seller: \(item.seller)"
-        cell.priceLabel.text = "Price: $\(item.price)"
+        cell.titleLabel.attributedText = Item.formatAttributedText(str1: "Item: ", str2: "\(item.title)")
+        cell.sellerLabel.attributedText = Item.formatAttributedText(str1: "Seller: ", str2: "\(item.seller)")
+        cell.priceLabel.attributedText = Item.formatAttributedText(str1: "Price: ", str2: "$\(item.price)")
         
         if
             let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
-//            cell.imageView?.image = image
             cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
                 , height: 105))
         }
