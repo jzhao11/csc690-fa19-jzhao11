@@ -64,6 +64,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044F82D3239B951200A140EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0467522E2399DC5900D49267 /* Category.swift */,
+				0484D94A2384818E003BA3DA /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		044F82D4239B958F00A140EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				042E3B8623990FE200B76BE6 /* RootTabBarController.swift */,
+				0419A5D123887A840021C36E /* BuyingViewController.swift */,
+				04C906442385F93600A58153 /* BuyingDetailViewController.swift */,
+				04DB74B3238743960094909A /* SignInViewController.swift */,
+				0430AE422397BBB90073D061 /* MyItemsViewController.swift */,
+				04B59C5E2398817800C4B249 /* MyDashBoardViewController.swift */,
+				0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */,
+				04B59C5C23987BF600C4B249 /* MyMessagesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		044F82D5239B961100A140EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0484D93A23847D4B003BA3DA /* Main.storyboard */,
+				0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */,
+				0419A5D3238882680021C36E /* ItemViewCell.swift */,
+				0419A5D4238882680021C36E /* ItemViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0484D92823847D4B003BA3DA = {
 			isa = PBXGroup;
 			children = (
@@ -85,20 +120,9 @@
 		0484D93323847D4B003BA3DA /* BuySellApp */ = {
 			isa = PBXGroup;
 			children = (
-				042E3B8623990FE200B76BE6 /* RootTabBarController.swift */,
-				0419A5D123887A840021C36E /* BuyingViewController.swift */,
-				04C906442385F93600A58153 /* BuyingDetailViewController.swift */,
-				0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */,
-				04DB74B3238743960094909A /* SignInViewController.swift */,
-				0430AE422397BBB90073D061 /* MyItemsViewController.swift */,
-				04B59C5E2398817800C4B249 /* MyDashBoardViewController.swift */,
-				04B59C5C23987BF600C4B249 /* MyMessagesViewController.swift */,
-				0484D93A23847D4B003BA3DA /* Main.storyboard */,
-				0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */,
-				0419A5D3238882680021C36E /* ItemViewCell.swift */,
-				0419A5D4238882680021C36E /* ItemViewCell.xib */,
-				0484D94A2384818E003BA3DA /* Item.swift */,
-				0467522E2399DC5900D49267 /* Category.swift */,
+				044F82D3239B951200A140EB /* Models */,
+				044F82D5239B961100A140EB /* Views */,
+				044F82D4239B958F00A140EB /* Controllers */,
 				0484D93D23847D4C003BA3DA /* Assets.xcassets */,
 				0484D93423847D4B003BA3DA /* AppDelegate.swift */,
 				0484D93623847D4B003BA3DA /* SceneDelegate.swift */,

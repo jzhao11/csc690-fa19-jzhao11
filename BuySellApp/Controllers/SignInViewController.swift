@@ -32,6 +32,8 @@ class SignInViewController: UIViewController {
             
             let jsonDict = JSON(data)
             if jsonDict["id"].stringValue != "" {
+                UserDefaults.standard.set(jsonDict["id"].stringValue, forKey: "userId")
+                UserDefaults.standard.set(jsonDict["username"].stringValue, forKey: "username")
                 self.performSegue(withIdentifier: "signIn", sender: self)
             } else {
                 print(jsonDict)

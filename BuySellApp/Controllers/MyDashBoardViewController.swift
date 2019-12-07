@@ -21,6 +21,8 @@ class MyDashBoardViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func signOut(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: "username")
         performSegue(withIdentifier: "signOut", sender: self)
     }
     
