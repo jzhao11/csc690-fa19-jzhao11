@@ -26,8 +26,6 @@ class Category: Model {
     
     static func getCurrentCategories () -> [Category] {
         return [
-            Category(id: "", title: ""),
-            Category(id: "", title: "All"),
             Category(id: "1", title: "Clothes"),
             Category(id: "20", title: "Entertainment"),
             Category(id: "9", title: "Books"),

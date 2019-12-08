@@ -15,10 +15,13 @@ class BuyingViewController: UITableViewController {
 
     var items: [Item] = []
     var itemId: String = ""
+    var categories: [Category] = [
+        Category(id: "", title: ""),
+        Category(id: "", title: "All")
+    ]
     var dataSource: UITableViewDataSource?
     var delegate: UITableViewDelegate?
     let categoryDropDown = DropDown()
-    let categories: [Category] = Category.getCurrentCategories()
 
     @IBOutlet weak var categoryButton: UIButton!
         
@@ -46,6 +49,7 @@ class BuyingViewController: UITableViewController {
         tableView.rowHeight = 125
 
         // dropdown menu of categories
+        categories.append(contentsOf: Category.getCurrentCategories())
         categoryDropDown.anchorView = view
         categoryDropDown.dataSource = categories.map {return $0.title}
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in

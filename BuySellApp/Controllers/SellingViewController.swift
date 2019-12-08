@@ -8,12 +8,22 @@
 
 import UIKit
 import Alamofire
+import DropDown
 
 class SellingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var categoryId = ""
+    var categories: [Category] = [
+        Category(id: "", title: "")
+    ]
+    let categoryDropDown = DropDown()
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func chooseCategory(_ sender: Any) {
+        categoryDropDown.show()
+    }
     
     @IBAction func chooseImage(_ sender: UIButton) {
         imagePicker.allowsEditing = false
@@ -34,7 +44,15 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-//        imageView.image = UIImage(named: "MacMini")
+
+        // dropdown menu of categories
+        categories.append(contentsOf: Category.getCurrentCategories())
+        categoryDropDown.anchorView = view
+        categoryDropDown.dataSource = categories.map {return $0.title}
+        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.categoryId = self.categories[index].id
+            print(self.categoryId)
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
