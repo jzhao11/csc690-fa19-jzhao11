@@ -20,6 +20,12 @@ class BuyingDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var sendMessageButton: UIButton!
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    @IBAction func sendMessage(_ sender: Any) {
+        print(messageTextField.text)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +53,8 @@ class BuyingDetailViewController: UIViewController {
             self.descriptionLabel.attributedText = Model.formatAttributedText(str1: "Description:\n", str2: "\(item.description)")
             self.createdAtLabel.attributedText = Model.formatAttributedText(str1: "Posted At:\n", str2: "\(item.createdAt)")
         }
+        
+        sendMessageButton.backgroundColor = UIColor(red: 0xEE / 0xFF, green: 0x9A / 0xFF, blue: 0x00 / 0xFF, alpha: 1.0)
+        sendMessageButton.setTitleColor(UIColor.white, for: .normal)
     }
 }

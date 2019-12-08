@@ -64,6 +64,9 @@
                                 <rect key="frame" x="87" y="760" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Contact Seller"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="CZn-eq-jH5" eventType="touchUpInside" id="5j4-0B-PWx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -73,8 +76,10 @@
                     <connections>
                         <outlet property="createdAtLabel" destination="INp-NQ-TYz" id="Jsl-Sl-7ce"/>
                         <outlet property="descriptionLabel" destination="AGc-v4-ko2" id="aVq-6e-GYh"/>
+                        <outlet property="messageTextField" destination="mvI-hZ-REE" id="dMk-82-xK7"/>
                         <outlet property="priceLabel" destination="n7u-H6-hce" id="iUB-BE-GKf"/>
                         <outlet property="sellerLabel" destination="nhV-id-Plt" id="CaO-Ts-m6X"/>
+                        <outlet property="sendMessageButton" destination="D8o-Ba-DGh" id="q5a-FV-xQq"/>
                         <outlet property="titleImageView" destination="imX-tm-v7w" id="prp-0M-Oco"/>
                         <outlet property="titleLabel" destination="V7v-k9-6z1" id="uQP-Eb-qh1"/>
                     </connections>
