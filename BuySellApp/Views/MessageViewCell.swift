@@ -1,21 +1,23 @@
 //
-//  MyTableViewCell.swift
+//  MessageViewCell.swift
 //  BuySellApp
 //
-//  Created by Mac on 11/22/19.
+//  Created by Mac on 12/7/19.
 //  Copyright © 2019 Christian Zhao. All rights reserved.
 //
 
 import UIKit
 
-class ItemViewCell: UITableViewCell {
+class MessageViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var fromUserLabel: UILabel!
+    @IBOutlet weak var toUserLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
         self.backgroundColor = UIColor.white
     }
 

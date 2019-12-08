@@ -22,8 +22,7 @@ class MyItemsViewController: UITableViewController {
         dataSource = self
         delegate = self
         self.registerTableViewCells()
-//        let urlToReadByUser = Item.getUrlToReadByUser(userId: userId)
-        let urlToReadByUser = Item.getUrlToReadAll()
+        let urlToReadByUser = Item.getUrlToReadByUser(userId: userId)
         loadItemsByUser(url: urlToReadByUser)
         tableView.dataSource = dataSource
         tableView.delegate = delegate
@@ -39,7 +38,7 @@ class MyItemsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell", for: indexPath) as! ItemViewCell
         cell.titleLabel.attributedText = Item.formatAttributedText(str1: "Item: ", str2: "\(item.title)")
         cell.priceLabel.attributedText = Item.formatAttributedText(str1: "Price: ", str2: "$\(item.price)")
-        cell.infoLabel.attributedText = Item.formatAttributedText(str1: "Posted At: ", str2: "\(item.createdAt)")
+        cell.infoLabel.attributedText = Item.formatAttributedText(str1: "Posted At: ", str2: "\(item.createdAt.prefix(10))")
         
         if
             let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
