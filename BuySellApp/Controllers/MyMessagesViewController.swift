@@ -13,6 +13,7 @@ import SwiftyJSON
 class MyMessagesViewController: UITableViewController {
     
     var messages: [Message] = []
+    var messageId: String = ""
     var userId = UserDefaults.standard.string(forKey: "userId") ?? ""
     var dataSource: UITableViewDataSource?
     var delegate: UITableViewDelegate?
@@ -50,6 +51,29 @@ class MyMessagesViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard
+            indexPath.row < messages.count
+        else {
+            return
+        }
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextPage = storyBoard.instantiateViewController(withIdentifier: "MessageDetailViewController") as! MessageDetailViewController
+        nextPage.messageId = messages[indexPath.row].id
+        self.navigationController?.pushViewController(nextPage, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let messageDetailViewController = segue.destination as? MessageDetailViewController
+        else {
+            return
+        }
+        
+        messageDetailViewController.messageId = messageId
     }
     
     func registerTableViewCells() {

@@ -21,6 +21,7 @@
 		0484D93E23847D4C003BA3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93D23847D4C003BA3DA /* Assets.xcassets */; };
 		0484D94123847D4C003BA3DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93F23847D4C003BA3DA /* LaunchScreen.storyboard */; };
 		0484D94B2384818E003BA3DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D94A2384818E003BA3DA /* Item.swift */; };
+		04A9A035239C8DC7007FFFD3 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9A034239C8DC7007FFFD3 /* MessageDetailViewController.swift */; };
 		04B27AEA239C58F600D389D4 /* MyDashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B27AE9239C58F600D389D4 /* MyDashBoardViewController.swift */; };
 		04B59C5D23987BF600C4B249 /* MyMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B59C5C23987BF600C4B249 /* MyMessagesViewController.swift */; };
 		04B59C5F2398817800C4B249 /* TestPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B59C5E2398817800C4B249 /* TestPanelViewController.swift */; };
@@ -49,6 +50,7 @@
 		0484D94023847D4C003BA3DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0484D94223847D4C003BA3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0484D94A2384818E003BA3DA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		04A9A034239C8DC7007FFFD3 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		04B27AE9239C58F600D389D4 /* MyDashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDashBoardViewController.swift; sourceTree = "<group>"; };
 		04B59C5C23987BF600C4B249 /* MyMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessagesViewController.swift; sourceTree = "<group>"; };
 		04B59C5E2398817800C4B249 /* TestPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPanelViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				04B27AE9239C58F600D389D4 /* MyDashBoardViewController.swift */,
 				0430AE422397BBB90073D061 /* MyItemsViewController.swift */,
 				04B59C5C23987BF600C4B249 /* MyMessagesViewController.swift */,
+				04A9A034239C8DC7007FFFD3 /* MessageDetailViewController.swift */,
 				04B59C5E2398817800C4B249 /* TestPanelViewController.swift */,
 			);
 			path = Controllers;
@@ -291,6 +294,7 @@
 				0484D94B2384818E003BA3DA /* Item.swift in Sources */,
 				0430AE432397BBB90073D061 /* MyItemsViewController.swift in Sources */,
 				04D1E92A239C7D8C00B77B66 /* Model.swift in Sources */,
+				04A9A035239C8DC7007FFFD3 /* MessageDetailViewController.swift in Sources */,
 				0467522F2399DC5900D49267 /* Category.swift in Sources */,
 				0419A5D223887A840021C36E /* BuyingViewController.swift in Sources */,
 				04F54D8D239C62630049C191 /* MessageViewCell.swift in Sources */,

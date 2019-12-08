@@ -367,10 +367,29 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7YT-z3-3iC"/>
+                    <connections>
+                        <segue destination="FoX-fS-P6x" kind="show" id="b4g-k3-oC0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86i-vc-hOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="99" y="-346"/>
+        </scene>
+        <!--Message Detail View Controller-->
+        <scene sceneID="5IV-4G-Juy">
+            <objects>
+                <viewController storyboardIdentifier="MessageDetailViewController" id="FoX-fS-P6x" customClass="MessageDetailViewController" customModule="BuySellApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xaz-jB-z2r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WtC-Mb-g8V"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oGw-U5-qmR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOS-qO-NA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="-346"/>
         </scene>
         <!--Buying View Controller-->
         <scene sceneID="FAV-Ec-zRj">
