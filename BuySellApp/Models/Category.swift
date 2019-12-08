@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class Category {
+class Category: Model {
     let id: String
     let title: String
 

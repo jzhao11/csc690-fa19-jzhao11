@@ -62,12 +62,12 @@ class BuyingViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell", for: indexPath) as! ItemViewCell
-        cell.titleLabel.attributedText = Item.formatAttributedText(str1: "Item: ", str2: "\(item.title)")
-        cell.priceLabel.attributedText = Item.formatAttributedText(str1: "Price: ", str2: "$\(item.price)")
-        cell.infoLabel.attributedText = Item.formatAttributedText(str1: "Seller: ", str2: "\(item.seller)")
+        cell.titleLabel.attributedText = Model.formatAttributedText(str1: "Item: ", str2: "\(item.title)")
+        cell.priceLabel.attributedText = Model.formatAttributedText(str1: "Price: ", str2: "$\(item.price)")
+        cell.infoLabel.attributedText = Model.formatAttributedText(str1: "Seller: ", str2: "\(item.seller)")
         
         if
-            let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
+            let url = URL(string: Model.getUrlToReadImage(imagePath: item.titleImage)),
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
             cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
@@ -120,15 +120,5 @@ class BuyingViewController: UITableViewController {
             }
             self.tableView.reloadData()
         }
-    }
-}
-
-extension UIImage {
-    func resizeImage(CGSize : CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(CGSize, false, UIScreen.main.scale)
-        self.draw(in: CGRect(x: 0, y: 0, width: CGSize.width, height: CGSize.height))
-        let resizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return resizedImage
     }
 }

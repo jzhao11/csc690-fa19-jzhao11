@@ -23,7 +23,7 @@ class BuyingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "http://127.0.0.1:8888/buysell/api/item/readbyid?id=\(itemId)"
+        let url = Item.getUrlToReadById(itemId: itemId)
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
             guard
                 let data = response.result.value
@@ -35,17 +35,17 @@ class BuyingDetailViewController: UIViewController {
             let item = Item(jsonDict: jsonDict)
             
             if
-                let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
+                let url = URL(string: Model.getUrlToReadImage(imagePath: item.titleImage)),
                 let data = try? Data(contentsOf: url) {
                 let image = UIImage(data: data)
                 self.titleImageView?.image = image?.resizeImage(CGSize: CGSize(width: 240, height: 180))
             }
 
-            self.titleLabel.attributedText = Item.formatAttributedText(str1: "Item:\n", str2: "\(item.title)")
-            self.sellerLabel.attributedText = Item.formatAttributedText(str1: "Seller:\n", str2: "\(item.seller)")
-            self.priceLabel.attributedText = Item.formatAttributedText(str1: "Price:\n", str2: "$\(item.price)")
-            self.descriptionLabel.attributedText = Item.formatAttributedText(str1: "Description:\n", str2: "\(item.description)")
-            self.createdAtLabel.attributedText = Item.formatAttributedText(str1: "Posted At:\n", str2: "\(item.createdAt)")
+            self.titleLabel.attributedText = Model.formatAttributedText(str1: "Item:\n", str2: "\(item.title)")
+            self.sellerLabel.attributedText = Model.formatAttributedText(str1: "Seller:\n", str2: "\(item.seller)")
+            self.priceLabel.attributedText = Model.formatAttributedText(str1: "Price:\n", str2: "$\(item.price)")
+            self.descriptionLabel.attributedText = Model.formatAttributedText(str1: "Description:\n", str2: "\(item.description)")
+            self.createdAtLabel.attributedText = Model.formatAttributedText(str1: "Posted At:\n", str2: "\(item.createdAt)")
         }
     }
 }

@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class MyMessagesViewController: UITableViewController {
     
-    var items: [Item] = []
+    var messages: [Message] = []
     var userId = UserDefaults.standard.string(forKey: "userId") ?? ""
     var dataSource: UITableViewDataSource?
     var delegate: UITableViewDelegate?
@@ -22,26 +22,27 @@ class MyMessagesViewController: UITableViewController {
         dataSource = self
         delegate = self
         self.registerTableViewCells()
-        let urlToReadByUser = Item.getUrlToReadByUser(userId: userId)
-        loadItemsByUser(url: urlToReadByUser)
+        let urlToReadByUser = Message.getUrlToReadByUser(userId: userId)
+        loadMessagesByUser(url: urlToReadByUser)
         tableView.dataSource = dataSource
         tableView.delegate = delegate
         tableView.rowHeight = 200
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return messages.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
+        let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageViewCell", for: indexPath) as! MessageViewCell
-        cell.fromUserLabel.attributedText = Item.formatAttributedText(str1: "From: ", str2: "\(item.title)")
-        cell.toUserLabel.attributedText = Item.formatAttributedText(str1: "To: ", str2: "\(item.price)")
-        cell.infoLabel.attributedText = Item.formatAttributedText(str1: "Sent At: ", str2: "\(item.createdAt.prefix(10))")
+        cell.fromUserLabel.attributedText = Model.formatAttributedText(str1: "From: ", str2: "\(message.fromUsername)")
+        cell.toUserLabel.attributedText = Model.formatAttributedText(str1: "To: ", str2: "\(message.toUsername)")
+        cell.infoLabel.attributedText = Model.formatAttributedText(str1: "Sent At: ", str2: "\(message.createdAt.prefix(10))")
+        cell.messageLabel.attributedText = Model.formatAttributedText(str1: "Message:\n", str2: "\(message.content)")
         
         if
-            let url = URL(string: Item.getUrlToReadImage(imagePath: item.titleImage)),
+            let url = URL(string: Model.getUrlToReadImage(imagePath: message.titleImage)),
             let data = try? Data(contentsOf: url) {
             let image = UIImage(data: data)
             cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
@@ -56,7 +57,7 @@ class MyMessagesViewController: UITableViewController {
         self.tableView.register(itemViewCell, forCellReuseIdentifier: "MessageViewCell")
     }
     
-    func loadItemsByUser(url: String) {
+    func loadMessagesByUser(url: String) {
         Alamofire.request(url, method: .get).responseJSON { (response) -> Void in
             guard
                 let data = response.result.value
@@ -64,10 +65,10 @@ class MyMessagesViewController: UITableViewController {
                 return
             }
             
-            self.items = []
+            self.messages = []
             let jsonArr = JSON(data)
             for jsonDict in jsonArr.arrayValue {
-                self.items.append(Item(jsonDict: jsonDict))
+                self.messages.append(Message(jsonDict: jsonDict))
             }
             self.tableView.reloadData()
         }
