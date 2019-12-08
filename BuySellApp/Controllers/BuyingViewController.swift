@@ -71,8 +71,8 @@ class BuyingViewController: UITableViewController {
         cell.infoLabel.attributedText = Model.formatAttributedText(str1: "Seller: ", str2: "\(item.seller)")
         
         if
-            let url = URL(string: Model.getUrlToReadImage(imagePath: item.titleImage)),
-            let data = try? Data(contentsOf: url) {
+            let imagePath = URL(string: Model.getUrlToReadImage(imagePath: item.titleImage)),
+            let data = try? Data(contentsOf: imagePath) {
             let image = UIImage(data: data)
             cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
                 , height: 105))

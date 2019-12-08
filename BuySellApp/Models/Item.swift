@@ -58,5 +58,9 @@ class Item: Model {
     static func getUrlToReadByKeyword(keyword: String) -> String {
         return commonUrl + "api/item/readbykeyword?keyword=" + keyword
     }
+    
+    static func getUrlToCreate() -> String {
+        return commonUrl + "api/item/create"
+    }
 }
 

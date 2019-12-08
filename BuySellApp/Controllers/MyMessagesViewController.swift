@@ -43,8 +43,8 @@ class MyMessagesViewController: UITableViewController {
         cell.messageLabel.attributedText = Model.formatAttributedText(str1: "Message:\n", str2: "\(message.content)")
         
         if
-            let url = URL(string: Model.getUrlToReadImage(imagePath: message.titleImage)),
-            let data = try? Data(contentsOf: url) {
+            let imagePath = URL(string: Model.getUrlToReadImage(imagePath: message.titleImage)),
+            let data = try? Data(contentsOf: imagePath) {
             let image = UIImage(data: data)
             cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
                 , height: 105))

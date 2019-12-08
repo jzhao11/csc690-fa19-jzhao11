@@ -12,10 +12,10 @@ import DropDown
 
 class SellingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var categories: [Category] = [Category(id: "", title: "")]
+    var imagePath = ""
     var categoryId = ""
-    var categories: [Category] = [
-        Category(id: "", title: "")
-    ]
+    let userId = UserDefaults.standard.string(forKey: "userId") ?? ""
     let categoryDropDown = DropDown()
     let imagePicker = UIImagePickerController()
     
@@ -32,13 +32,13 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func postItem(_ sender: Any) {
-        let url = "http://127.0.0.1:8888/buysell/api/item/create"
+        let urlToCreate = Item.getUrlToCreate()
         let params = [
-            "user": "123",
-            "title": "Mac Mini"
+            "user_id": userId,
+            "caregory_id": categoryId,
         ]
         let image = imageView.image
-        upload(url: url, params: params, image: image)
+        createItem(url: urlToCreate, params: params, image: image)
     }
     
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismiss(animated: true, completion: nil)
     }
     
-    func upload(url: String, params: [String: String]?, image: UIImage?
+    func createItem(url: String, params: [String: String]?, image: UIImage?
 //        , success: @escaping (_ response: Any?) -> (), failture : @escaping (_ error: Error) -> ()
     ) {
         Alamofire.upload(
@@ -93,7 +93,7 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
                 switch encodingResult {
                     case .success(let upload, _, _):
                         upload.responseJSON { response in
-                            print("response = \(response)")
+                            print("item successfully created: \(response)")
                             let result = response.result
                             if result.isSuccess {
 //                                success(response.value)

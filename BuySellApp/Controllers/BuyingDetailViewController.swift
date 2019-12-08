@@ -41,8 +41,8 @@ class BuyingDetailViewController: UIViewController {
             let item = Item(jsonDict: jsonDict)
             
             if
-                let url = URL(string: Model.getUrlToReadImage(imagePath: item.titleImage)),
-                let data = try? Data(contentsOf: url) {
+                let imagePath = URL(string: Model.getUrlToReadImage(imagePath: item.titleImage)),
+                let data = try? Data(contentsOf: imagePath) {
                 let image = UIImage(data: data)
                 self.titleImageView?.image = image?.resizeImage(CGSize: CGSize(width: 240, height: 180))
             }
