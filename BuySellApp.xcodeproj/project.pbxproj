@@ -15,6 +15,7 @@
 		044A8204239C768D004A3F5F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A8203239C768D004A3F5F /* Message.swift */; };
 		0467522F2399DC5900D49267 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467522E2399DC5900D49267 /* Category.swift */; };
 		0469D5BF23866D2400D9ECE8 /* SellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */; };
+		047729EE239DF513007E9528 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047729ED239DF513007E9528 /* CustomColor.swift */; };
 		0484D93523847D4B003BA3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93423847D4B003BA3DA /* AppDelegate.swift */; };
 		0484D93723847D4B003BA3DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D93623847D4B003BA3DA /* SceneDelegate.swift */; };
 		0484D93C23847D4B003BA3DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484D93A23847D4B003BA3DA /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		044A8203239C768D004A3F5F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0467522E2399DC5900D49267 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0469D5BE23866D2400D9ECE8 /* SellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellingViewController.swift; sourceTree = "<group>"; };
+		047729ED239DF513007E9528 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		0484D93123847D4B003BA3DA /* BuySellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuySellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0484D93423847D4B003BA3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0484D93623847D4B003BA3DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				0419A5D4238882680021C36E /* ItemViewCell.xib */,
 				04F54D8B239C62620049C191 /* MessageViewCell.swift */,
 				04F54D8C239C62620049C191 /* MessageViewCell.xib */,
+				047729ED239DF513007E9528 /* CustomColor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				04D1E92A239C7D8C00B77B66 /* Model.swift in Sources */,
 				04A9A035239C8DC7007FFFD3 /* MessageDetailViewController.swift in Sources */,
 				0467522F2399DC5900D49267 /* Category.swift in Sources */,
+				047729EE239DF513007E9528 /* CustomColor.swift in Sources */,
 				0419A5D223887A840021C36E /* BuyingViewController.swift in Sources */,
 				04F54D8D239C62630049C191 /* MessageViewCell.swift in Sources */,
 				044A8204239C768D004A3F5F /* Message.swift in Sources */,

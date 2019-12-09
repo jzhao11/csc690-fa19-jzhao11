@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     @IBAction func changeSegment(_ sender: Any) {
-        promptLabel.textColor = UIColor.red
+        promptLabel.textColor = UIColor.systemRed
         promptLabel.text = ""
         usernameTextField.text = ""
         passwordTextField.text = ""
@@ -68,7 +68,7 @@ class SignInViewController: UIViewController {
                     self.segmentControl.selectedSegmentIndex = 0
                     self.changeSegment(self)
                     self.promptLabel.textColor = UIColor.systemGreen
-                    self.promptLabel.text = "Success! Please sign in."
+                    self.promptLabel.text = "Success! Please Sign In"
                 } else {
                     self.promptLabel.text = jsonDict.stringValue
                 }
@@ -82,9 +82,9 @@ class SignInViewController: UIViewController {
         urlToSignIn = Model.commonUrl + "api/user/signin"
         confirmPasswordLabel.isHidden = true
         confirmPasswordTextField.isHidden = true
-        promptLabel.textColor = UIColor.red
+        promptLabel.textColor = UIColor.systemRed
         promptLabel.textAlignment = NSTextAlignment.center
-        signInButton.backgroundColor = UIColor(red: 0x28 / 0xFF, green: 0xA7 / 0xFF, blue: 0x45 / 0xFF, alpha: 1.0)
+        signInButton.backgroundColor = CustomColor.successGreen
         signInButton.setTitleColor(UIColor.white, for: .normal)
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true

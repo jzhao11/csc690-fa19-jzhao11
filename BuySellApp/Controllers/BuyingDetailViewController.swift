@@ -54,7 +54,7 @@ class BuyingDetailViewController: UIViewController {
             self.createdAtLabel.attributedText = Model.formatAttributedText(str1: "Posted At:\n", str2: "\(item.createdAt)")
         }
         
-        sendMessageButton.backgroundColor = UIColor(red: 0xEE / 0xFF, green: 0x9A / 0xFF, blue: 0x00 / 0xFF, alpha: 1.0)
+        sendMessageButton.backgroundColor = CustomColor.warningYellow
         sendMessageButton.setTitleColor(UIColor.white, for: .normal)
     }
 }
