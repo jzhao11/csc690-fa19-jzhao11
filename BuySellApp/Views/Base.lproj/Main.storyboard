@@ -277,14 +277,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBY-oY-574">
-                                <rect key="frame" x="131" y="230" width="150" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ak4-ae-h2J">
-                                <rect key="frame" x="131" y="350" width="150" height="34"/>
+                                <rect key="frame" x="117" y="350" width="180" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -316,7 +310,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKW-zz-gA3">
-                                <rect key="frame" x="132" y="470" width="150" height="34"/>
+                                <rect key="frame" x="117" y="469" width="180" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jui-xP-YJ3">
+                                <rect key="frame" x="107" y="510" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBY-oY-574">
+                                <rect key="frame" x="117" y="230" width="180" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -328,8 +335,9 @@
                     <navigationItem key="navigationItem" id="ajr-YD-Jwp"/>
                     <connections>
                         <outlet property="confirmPasswordLabel" destination="ORw-xL-21l" id="1jd-gd-lM9"/>
-                        <outlet property="confirmPasswordTextField" destination="HKW-zz-gA3" id="dSL-Sl-YgU"/>
+                        <outlet property="confirmPasswordTextField" destination="HKW-zz-gA3" id="HDj-Fu-PtT"/>
                         <outlet property="passwordTextField" destination="Ak4-ae-h2J" id="ubK-bX-Ah1"/>
+                        <outlet property="promptLabel" destination="Jui-xP-YJ3" id="kCJ-Fx-8Ky"/>
                         <outlet property="segmentControl" destination="kmm-SF-lfD" id="9zb-Ej-Ix8"/>
                         <outlet property="signInButton" destination="Evi-uM-2p7" id="kZc-Bn-BAO"/>
                         <outlet property="usernameTextField" destination="kBY-oY-574" id="8Av-y9-x4z"/>
@@ -544,6 +552,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9gZ-ub-cHw"/>
         <segue reference="iQo-q3-UIO"/>
     </inferredMetricsTieBreakers>
 </document>

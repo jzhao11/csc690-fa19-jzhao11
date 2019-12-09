@@ -19,9 +19,15 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordLabel: UILabel!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     
     @IBAction func changeSegment(_ sender: Any) {
+        promptLabel.textColor = UIColor.red
+        promptLabel.text = ""
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+        confirmPasswordTextField.text = ""
         if (segmentControl.selectedSegmentIndex == 0) {
             signInButton.setTitle("Sign In", for: UIControl.State.normal)
             confirmPasswordLabel.isHidden = true
@@ -38,7 +44,8 @@ class SignInViewController: UIViewController {
     @IBAction func signIn(_ sender: Any) {
         let params = [
             "username": usernameTextField.text ?? "",
-            "password": passwordTextField.text ?? ""
+            "password": passwordTextField.text ?? "",
+            "confirm_password": confirmPasswordTextField.text ?? ""
         ]
         Alamofire.request(urlToSignIn, method: .post, parameters: params as Parameters).responseJSON { (response) -> Void in
             guard
@@ -54,14 +61,16 @@ class SignInViewController: UIViewController {
                     UserDefaults.standard.set(jsonDict["username"].stringValue, forKey: "username")
                     self.performSegue(withIdentifier: "signIn", sender: self)
                 } else {
-                    print(jsonDict)
+                    self.promptLabel.text = jsonDict.stringValue
                 }
             } else {
                 if jsonDict["id"].stringValue != "" {
-                    self.segmentControl.selectedSegmentIndex = 1
+                    self.segmentControl.selectedSegmentIndex = 0
                     self.changeSegment(self)
+                    self.promptLabel.textColor = UIColor.systemGreen
+                    self.promptLabel.text = "Success! Please sign in."
                 } else {
-                    print(jsonDict)
+                    self.promptLabel.text = jsonDict.stringValue
                 }
             }
         }
@@ -73,6 +82,8 @@ class SignInViewController: UIViewController {
         urlToSignIn = Model.commonUrl + "api/user/signin"
         confirmPasswordLabel.isHidden = true
         confirmPasswordTextField.isHidden = true
+        promptLabel.textColor = UIColor.red
+        promptLabel.textAlignment = NSTextAlignment.center
         signInButton.backgroundColor = UIColor(red: 0x28 / 0xFF, green: 0xA7 / 0xFF, blue: 0x45 / 0xFF, alpha: 1.0)
         signInButton.setTitleColor(UIColor.white, for: .normal)
         self.navigationItem.leftBarButtonItem = nil
