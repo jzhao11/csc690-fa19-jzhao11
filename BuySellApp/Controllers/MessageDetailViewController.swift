@@ -10,7 +10,7 @@ import UIKit
 
 class MessageDetailViewController: UIViewController {
     
-    var messageId: String = ""
+    var messageId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

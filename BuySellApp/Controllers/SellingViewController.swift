@@ -43,20 +43,24 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
         let title = titleTextField.text ?? ""
         let description = descriptionTextField.text ?? ""
         let price = Double(priceTextField.text ?? "") ?? 0.0
-        promptLabel.textColor = UIColor.systemRed
         if (categoryId == "") {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Missing Category"
             return
         } else if (titleImage == UIImage.init()) {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Missing Title Image"
             return
         } else if (title == "") {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Missing Title"
             return
         } else if (description == "") {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Missing Description"
             return
         } else if (price <= 0.0) {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Invalid Price"
             return
         }
@@ -69,7 +73,6 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
             "description": description,
             "price": String(format: "%.2f", price)
         ]
-        
         createItem(url: urlToCreate, params: params, image: titleImage)
     }
     

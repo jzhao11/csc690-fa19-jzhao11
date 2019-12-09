@@ -14,7 +14,6 @@ import DropDown
 class BuyingViewController: UITableViewController {
 
     var items: [Item] = []
-    var itemId: String = ""
     var categories: [Category] = [
         Category(id: "", title: ""),
         Category(id: "", title: "All")
@@ -91,18 +90,18 @@ class BuyingViewController: UITableViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextPage = storyBoard.instantiateViewController(withIdentifier: "BuyingDetailViewController") as! BuyingDetailViewController
         nextPage.itemId = items[indexPath.row].id
+        nextPage.toUserId = items[indexPath.row].userId
         self.navigationController?.pushViewController(nextPage, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            let buyingDetailViewController = segue.destination as? BuyingDetailViewController
-        else {
-            return
-        }
-        
-        buyingDetailViewController.itemId = itemId
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard
+//            let buyingDetailViewController = segue.destination as? BuyingDetailViewController
+//        else {
+//            return
+//        }
+//        buyingDetailViewController.itemId = itemId
+//    }
     
     func registerTableViewCells() {
         let itemViewCell = UINib(nibName: "ItemViewCell", bundle: nil)

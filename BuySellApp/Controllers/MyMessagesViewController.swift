@@ -13,13 +13,14 @@ import SwiftyJSON
 class MyMessagesViewController: UITableViewController {
     
     var messages: [Message] = []
-    var messageId: String = ""
-    var userId = UserDefaults.standard.string(forKey: "userId") ?? ""
+    var messageId = ""
+    var userId = ""
     var dataSource: UITableViewDataSource?
     var delegate: UITableViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = UserDefaults.standard.string(forKey: "userId") ?? ""
         dataSource = self
         delegate = self
         self.registerTableViewCells()

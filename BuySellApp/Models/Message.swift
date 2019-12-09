@@ -39,4 +39,8 @@ class Message: Model {
     static func getUrlToReadByUser(userId: String) -> String {
         return commonUrl + "api/message/readbyuser?userid=" + userId
     }
+    
+    static func getUrlToCreate() -> String {
+        return commonUrl + "api/message/create"
+    }
 }

@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class Item: Model {
     let id: String
+    let userId: String
     let title: String
     let titleImage: String
     let price: Double
@@ -19,8 +20,9 @@ class Item: Model {
     let seller: String
     let createdAt: String
 
-    init(id: String, title: String, titleImage: String, price: Double, description: String, seller: String, createdAt: String) {
+    init(id: String, userId: String, title: String, titleImage: String, price: Double, description: String, seller: String, createdAt: String) {
         self.id = id
+        self.userId = userId
         self.title = title
         self.titleImage = titleImage
         self.price = price
@@ -31,6 +33,7 @@ class Item: Model {
     
     init(jsonDict: JSON) {
         self.id = jsonDict["id"].stringValue
+        self.userId = jsonDict["user_id"].stringValue
         self.title = jsonDict["title"].stringValue
         self.titleImage = jsonDict["title_img"].stringValue
         self.price = jsonDict["price"].doubleValue

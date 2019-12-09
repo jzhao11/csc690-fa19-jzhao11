@@ -44,11 +44,12 @@ class SignInViewController: UIViewController {
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let confirmPassword = confirmPasswordTextField.text ?? ""
-        promptLabel.textColor = UIColor.systemRed
         if (username == "") {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Missing Username"
             return
         } else if (password == "") {
+            promptLabel.textColor = UIColor.systemRed
             promptLabel.text = "Missing Password"
             return
         }
