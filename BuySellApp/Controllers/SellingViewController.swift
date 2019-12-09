@@ -16,16 +16,18 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
     var categories: [Category] = [Category(id: "", title: "")]
     var imagePath = ""
     var categoryId = ""
-    let userId = UserDefaults.standard.string(forKey: "userId") ?? ""
+    var userId = ""
     let categoryDropDown = DropDown()
     let imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var postButton: UIButton!
-    
+
     @IBAction func chooseCategory(_ sender: Any) {
         categoryDropDown.show()
     }
@@ -41,17 +43,21 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
         let title = titleTextField.text ?? ""
         let description = descriptionTextField.text ?? ""
         let price = Double(priceTextField.text ?? "") ?? 0.0
-        if (titleImage == UIImage.init()) {
-            print("Missing Title Image!")
+        promptLabel.textColor = UIColor.systemRed
+        if (categoryId == "") {
+            promptLabel.text = "Missing Category"
+            return
+        } else if (titleImage == UIImage.init()) {
+            promptLabel.text = "Missing Title Image"
             return
         } else if (title == "") {
-            print("Missing Title!")
+            promptLabel.text = "Missing Title"
             return
         } else if (description == "") {
-            print("Missing Description!")
+            promptLabel.text = "Missing Description"
             return
         } else if (price <= 0.0) {
-            print("Invalid Price!")
+            promptLabel.text = "Invalid Price"
             return
         }
         
@@ -69,6 +75,7 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = UserDefaults.standard.string(forKey: "userId") ?? ""
         imagePicker.delegate = self
         postButton.backgroundColor = CustomColor.successGreen
         postButton.setTitleColor(UIColor.white, for: .normal)
@@ -79,7 +86,7 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
         categoryDropDown.dataSource = categories.map {return $0.title}
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.categoryId = self.categories[index].id
-            print(self.categoryId)
+            self.categoryLabel.text = self.categories[index].title
         }
     }
     
@@ -119,12 +126,21 @@ class SellingViewController: UIViewController, UIImagePickerControllerDelegate, 
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                     case .success(let upload, _, _):
-                        upload.responseString { response in
-                            print("item successfully created: \(response)")
-                            let result = response.result
-                            if result.isSuccess {
-//                                success(response.value)
+                        upload.responseJSON { response in
+                            guard
+                                let data = response.result.value
+                            else {
+                                return
                             }
+                            
+                            let jsonDict = JSON(data)
+                            if (jsonDict["id"].stringValue != "") {
+                                self.promptLabel.textColor = CustomColor.successGreen
+                                self.promptLabel.text = "Success! Item Posted"
+                            }
+//                            print("item successfully created: \(response)")
+//                            let result = response.result
+//                            if (result.isSuccess) {success(response.value)}
                         }
                     case .failure(let encodingError):
 //                        failture(encodingError)

@@ -13,12 +13,13 @@ import SwiftyJSON
 class MyItemsViewController: UITableViewController {
     
     var items: [Item] = []
-    var userId = UserDefaults.standard.string(forKey: "userId") ?? ""
+    var userId = ""
     var dataSource: UITableViewDataSource?
     var delegate: UITableViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userId = UserDefaults.standard.string(forKey: "userId") ?? ""
         dataSource = self
         delegate = self
         self.registerTableViewCells()
