@@ -12,18 +12,35 @@ import SwiftyJSON
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet weak var segment: UISegmentedControl!
+    var urlToSignIn = ""
+    
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    @IBAction func changeSegment(_ sender: Any) {
+        if (segmentControl.selectedSegmentIndex == 0) {
+            signInButton.setTitle("Sign In", for: UIControl.State.normal)
+            confirmPasswordLabel.isHidden = true
+            confirmPasswordTextField.isHidden = true
+            urlToSignIn = Model.commonUrl + "api/user/signin"
+        } else {
+            signInButton.setTitle("Register", for: UIControl.State.normal)
+            confirmPasswordLabel.isHidden = false
+            confirmPasswordTextField.isHidden = false
+            urlToSignIn = Model.commonUrl + "api/user/register"
+        }
+    }
+    
     @IBAction func signIn(_ sender: Any) {
-        let url = "http://127.0.0.1:8888/buysell/api/user/signin"
         let params = [
             "username": usernameTextField.text ?? "",
             "password": passwordTextField.text ?? ""
         ]
-        Alamofire.request(url, method: .post, parameters: params as Parameters).responseJSON { (response) -> Void in
+        Alamofire.request(urlToSignIn, method: .post, parameters: params as Parameters).responseJSON { (response) -> Void in
             guard
                 let data = response.result.value
             else {
@@ -31,25 +48,34 @@ class SignInViewController: UIViewController {
             }
             
             let jsonDict = JSON(data)
-            if jsonDict["id"].stringValue != "" {
-                UserDefaults.standard.set(jsonDict["id"].stringValue, forKey: "userId")
-                UserDefaults.standard.set(jsonDict["username"].stringValue, forKey: "username")
-                self.performSegue(withIdentifier: "signIn", sender: self)
+            if (self.segmentControl.selectedSegmentIndex == 0) {
+                if jsonDict["id"].stringValue != "" {
+                    UserDefaults.standard.set(jsonDict["id"].stringValue, forKey: "userId")
+                    UserDefaults.standard.set(jsonDict["username"].stringValue, forKey: "username")
+                    self.performSegue(withIdentifier: "signIn", sender: self)
+                } else {
+                    print(jsonDict)
+                }
             } else {
-                print(jsonDict)
+                if jsonDict["id"].stringValue != "" {
+                    self.segmentControl.selectedSegmentIndex = 1
+                    self.changeSegment(self)
+                } else {
+                    print(jsonDict)
+                }
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        segmentControl.selectedSegmentIndex = 0
+        urlToSignIn = Model.commonUrl + "api/user/signin"
+        confirmPasswordLabel.isHidden = true
+        confirmPasswordTextField.isHidden = true
         signInButton.backgroundColor = UIColor(red: 0x28 / 0xFF, green: 0xA7 / 0xFF, blue: 0x45 / 0xFF, alpha: 1.0)
         signInButton.setTitleColor(UIColor.white, for: .normal)
-        segment.selectedSegmentIndex = 0
-        
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
     }
-    
-    func segmentDidChange() {}
 }
