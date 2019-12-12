@@ -28,7 +28,7 @@ class MyMessagesViewController: UITableViewController {
         loadMessagesByUser(url: urlToReadByUser)
         tableView.dataSource = dataSource
         tableView.delegate = delegate
-        tableView.rowHeight = 200
+        tableView.rowHeight = 100
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,17 +40,7 @@ class MyMessagesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageViewCell", for: indexPath) as! MessageViewCell
         cell.fromUserLabel.attributedText = Model.formatAttributedText(str1: "From: ", str2: "\(message.fromUsername)")
         cell.toUserLabel.attributedText = Model.formatAttributedText(str1: "To: ", str2: "\(message.toUsername)")
-        cell.infoLabel.attributedText = Model.formatAttributedText(str1: "Sent At: ", str2: "\(message.createdAt.prefix(10))")
-        cell.messageLabel.attributedText = Model.formatAttributedText(str1: "Message:\n", str2: "\(message.content)")
-        
-        if
-            let imagePath = URL(string: Model.getUrlToReadImage(imagePath: message.titleImage)),
-            let data = try? Data(contentsOf: imagePath) {
-            let image = UIImage(data: data)
-            cell.imageView?.image = image?.resizeImage(CGSize: CGSize(width: 140
-                , height: 105))
-        }
-        
+        cell.infoLabel.attributedText = Model.formatAttributedText(str1: "Sent At: ", str2: "\(message.createdAt)")
         return cell
     }
     
@@ -64,6 +54,9 @@ class MyMessagesViewController: UITableViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextPage = storyBoard.instantiateViewController(withIdentifier: "MessageDetailViewController") as! MessageDetailViewController
         nextPage.messageId = messages[indexPath.row].id
+        nextPage.itemId = messages[indexPath.row].itemId
+        nextPage.toUserId = messages[indexPath.row].fromUserId
+        nextPage.fromUserId = messages[indexPath.row].toUserId
         self.navigationController?.pushViewController(nextPage, animated: true)
     }
     
