@@ -273,43 +273,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cd-c6-n37">
-                                <rect key="frame" x="0.0" y="88" width="414" height="168"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-db-Osm">
+                                <rect key="frame" x="0.0" y="80" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-jU-CbQ">
-                                <rect key="frame" x="0.0" y="256" width="414" height="168"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-Qg-vwP">
+                                <rect key="frame" x="0.0" y="280" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-Qg-vwP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="My Items"/>
-                                        <connections>
-                                            <segue destination="2F0-ET-d0u" kind="show" id="UNA-cs-JLS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82D-Hd-N23">
-                                <rect key="frame" x="0.0" y="424" width="414" height="168"/>
+                                <state key="normal" title="My Items"/>
+                                <connections>
+                                    <segue destination="2F0-ET-d0u" kind="show" id="UNA-cs-JLS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvg-3W-Pm4">
+                                <rect key="frame" x="0.0" y="480" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvg-3W-Pm4">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="My Messages"/>
-                                        <connections>
-                                            <segue destination="I3D-dz-Dme" kind="show" id="rou-xn-RZD"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <state key="normal" title="My Messages"/>
+                                <connections>
+                                    <segue destination="I3D-dz-Dme" kind="show" id="rou-xn-RZD"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-SG-FDu">
-                                <rect key="frame" x="0.0" y="592" width="414" height="168"/>
+                                <rect key="frame" x="0.0" y="680" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Out"/>
                                 <connections>
@@ -320,8 +308,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bhy-LQ-IHt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gcl-hy-fsl"/>
+                    <tabBarItem key="tabBarItem" title="Me" id="gcl-hy-fsl"/>
                     <connections>
+                        <outlet property="myItemsButton" destination="Ek1-Qg-vwP" id="NvL-F3-TNe"/>
+                        <outlet property="myMessagesButton" destination="nvg-3W-Pm4" id="KgS-qu-jVa"/>
+                        <outlet property="signOutButton" destination="ywY-SG-FDu" id="37i-a9-kts"/>
+                        <outlet property="welcomeLabel" destination="0tx-db-Osm" id="LYb-CP-rql"/>
                         <segue destination="4zl-vG-mSA" kind="show" identifier="signOut" id="iQo-q3-UIO"/>
                     </connections>
                 </viewController>
