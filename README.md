@@ -16,7 +16,7 @@ Ever wanted a more convenient marketplace at your university? BuySellApp, an iOS
 The BuySell iOS application will primarily focus on students and nearby residents of San Francisco State University in which they can buy and sell products online easily. This application is important because not only is it convenient, but it also creates opportunities for college students who are extremely tight on budgeting and just need a little extra cash, or it helps local students purchase items without the need to wait for shipping and processing. Rather, students will be able to buy products and have the option of picking it up from the seller, or having it shipped to them at their own convenience.  
   
 With the knowledge of swift that I have learned from CSC690 class, I aim to create a user-friendly iOS app by providing the customers with a simplistic yet efficient user interface, in which they will be able to utilize buying and selling functionalities.  
-
+  
 Must-have Features:  
 New user shall be able to register an account.  
 Registered user shall be able to sign in the app.  
@@ -32,3 +32,13 @@ When posting a new item, prompt info shall be provided if any required fields is
 In dashboard, user shall be able to see the items that have been posted by himself/herself.  
 In dashboard, user shall be able to see the messages s/he has sent or the ones sent to him/her.  
 User shall be able to sign out.  
+  
+Wire Frames:  
+The basic design of user interface is available in the Main.storyboard.  
+In addition to the interface builder, some view components are customized within the program.  
+  
+MVC Structure:  
+The MVC structure of this app can be reflected by the following directories.  
+Model: BuySellApp/Models  
+View: BuySellApp/Views  
+Controller: BuySellApp/Controllers  
