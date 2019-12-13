@@ -17,6 +17,17 @@ The BuySell iOS application will primarily focus on students and nearby resident
   
 With the knowledge of swift that I have learned from CSC690 class, I aim to create a user-friendly iOS app by providing the customers with a simplistic yet efficient user interface, in which they will be able to utilize buying and selling functionalities.  
   
+How To Run:  
+Use the command "git clone https://github.com/jzhao11/csc690-fa19-jzhao11.git" to clone the repo, with "csc690-fa19-jzhao11" as default name.  
+Go to "csc690-fa19-jzhao11/BuySellApp".  
+Double-click "BuySellApp.xcworkspace" to open it in XCode.  
+Click the running button in XCode to run this app.  
+  
+User Credentials For Test:  
+Here is a registered user account that can be used for your tests, with some history items and messages.  
+Username: jzhao11  
+Password: 111111  
+  
 Must-have Features:  
 New user shall be able to register an account.  
 Registered user shall be able to sign in the app.  
@@ -32,11 +43,6 @@ When posting a new item, prompt info shall be provided if any required fields is
 In dashboard, user shall be able to see the items that have been posted by himself/herself.  
 In dashboard, user shall be able to see the messages s/he has sent or the ones sent to him/her.  
 User shall be able to sign out.  
-  
-User Credentials For Test:  
-Here is a registered user account that can be used for your tests (with some items and messages).  
-Username: jzhao11  
-Password: 111111  
   
 Wire Frames:  
 The basic design of user interface is available in the Main.storyboard.  
