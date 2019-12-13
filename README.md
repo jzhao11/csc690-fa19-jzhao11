@@ -18,13 +18,13 @@ The BuySell iOS application will primarily focus on students and nearby resident
 With the knowledge of swift that I have learned from CSC690 class, I aim to create a user-friendly iOS app by providing the customers with a simplistic yet efficient user interface, in which they will be able to utilize buying and selling functionalities.  
 
 Must-have Features:  
-New user shall be able to register a new account.  
-During registration, prompt info shall be provided if there is an error (e.g., duplicate username, mismatch password, etc.).
+New user shall be able to register an account.  
 Registered user shall be able to sign in the app.  
+During registration or login, prompt info shall be provided if there is an error (e.g., duplicate username, mismatch password, etc.).  
 User shall be able to see all the product items as a list.  
 User shall be able to search items according to keyword.  
 User shall be able to select items according to different categories.  
-By clicking each item in the list page, user shall be able to view more related information in a detailed page.  
+By clicking each item in the list page, user shall be able to view the related information of this item in a detail page.  
 User shall be able to contact the seller by sending a message.  
 When sending a message, prompt info shall be provided if the message content is empty.  
 User shall be able to sell items.  
