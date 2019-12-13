@@ -16,3 +16,19 @@ Ever wanted a more convenient marketplace at your university? BuySellApp, an iOS
 The BuySell iOS application will primarily focus on students and nearby residents of San Francisco State University in which they can buy and sell products online easily. This application is important because not only is it convenient, but it also creates opportunities for college students who are extremely tight on budgeting and just need a little extra cash, or it helps local students purchase items without the need to wait for shipping and processing. Rather, students will be able to buy products and have the option of picking it up from the seller, or having it shipped to them at their own convenience.  
   
 With the knowledge of swift that I have learned from CSC690 class, I aim to create a user-friendly iOS app by providing the customers with a simplistic yet efficient user interface, in which they will be able to utilize buying and selling functionalities.  
+
+Must-have Features:  
+New user shall be able to register a new account.  
+During registration, prompt info shall be provided if there is an error (e.g., duplicate username, mismatch password, etc.).
+Registered user shall be able to sign in the app.  
+User shall be able to see all the product items as a list.  
+User shall be able to search items according to keyword.  
+User shall be able to select items according to different categories.  
+By clicking each item in the list page, user shall be able to view more related information in a detailed page.  
+User shall be able to contact the seller by sending a message.  
+When sending a message, prompt info shall be provided if the message content is empty.  
+User shall be able to sell items.  
+When posting a new item, prompt info shall be provided if any required fields is missing.  
+In dashboard, user shall be able to see the items that have been posted by himself/herself.  
+In dashboard, user shall be able to see the messages s/he has sent or the ones sent to him/her.  
+User shall be able to sign out.  
