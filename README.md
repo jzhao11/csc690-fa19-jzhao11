@@ -33,6 +33,11 @@ In dashboard, user shall be able to see the items that have been posted by himse
 In dashboard, user shall be able to see the messages s/he has sent or the ones sent to him/her.  
 User shall be able to sign out.  
   
+User Credentials For Test:  
+Here is a registered user account that can be used for your tests (with some items and messages).  
+Username: jzhao11  
+Password: 111111  
+  
 Wire Frames:  
 The basic design of user interface is available in the Main.storyboard.  
 In addition to the interface builder, some view components are customized within the program.  

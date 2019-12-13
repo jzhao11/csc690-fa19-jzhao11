@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class Model {
-    static let commonUrl: String = "http://127.0.0.1:8888/buysell/"
+    static let commonUrl: String = "http://52.53.151.37/buysell/"
     static let modelNSAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
     
     static func getUrlToReadImage(imagePath: String) -> String {
