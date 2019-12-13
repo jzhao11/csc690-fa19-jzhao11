@@ -28,6 +28,9 @@ Here is a registered user account that can be used for your tests, with some his
 Username: jzhao11  
 Password: 111111  
   
+Simulator:  
+Version: iPhone 11 Pro Max  
+  
 Must-have Features:  
 New user shall be able to register an account.  
 Registered user shall be able to sign in the app.  
