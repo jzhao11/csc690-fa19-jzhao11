@@ -394,6 +394,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="da8-2K-xsd">
+                                <rect key="frame" x="132" y="630" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To BuySellApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRU-dl-obJ">
+                                <rect key="frame" x="84" y="130" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pzg-Nb-tpP"/>
@@ -402,6 +413,7 @@
                     <connections>
                         <outlet property="confirmPasswordLabel" destination="ORw-xL-21l" id="1jd-gd-lM9"/>
                         <outlet property="confirmPasswordTextField" destination="HKW-zz-gA3" id="HDj-Fu-PtT"/>
+                        <outlet property="iconImageView" destination="da8-2K-xsd" id="UGp-if-faf"/>
                         <outlet property="passwordTextField" destination="Ak4-ae-h2J" id="ubK-bX-Ah1"/>
                         <outlet property="promptLabel" destination="Jui-xP-YJ3" id="kCJ-Fx-8Ky"/>
                         <outlet property="segmentControl" destination="kmm-SF-lfD" id="9zb-Ej-Ix8"/>

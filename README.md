@@ -47,3 +47,6 @@ The MVC structure of this app can be reflected by the following directories.
 Model: BuySellApp/Models  
 View: BuySellApp/Views  
 Controller: BuySellApp/Controllers  
+  
+Notification:  
+If you come across an error message like "... iCloud Keychain is disabled ...", you may try to re-launch the app.  

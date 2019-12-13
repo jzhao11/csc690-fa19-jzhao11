@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     @IBAction func changeSegment(_ sender: Any) {
         promptLabel.text = ""
@@ -99,6 +100,7 @@ class SignInViewController: UIViewController {
         promptLabel.textAlignment = NSTextAlignment.center
         signInButton.backgroundColor = CustomColor.successGreen
         signInButton.setTitleColor(UIColor.white, for: .normal)
+        iconImageView?.image = UIImage(named: "BuySellApp")
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
     }
