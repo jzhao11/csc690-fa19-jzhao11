@@ -19,7 +19,7 @@ With the knowledge of swift that I have learned from CSC690 class, I aim to crea
   
 How To Run:  
 Use the command "git clone https://github.com/jzhao11/csc690-fa19-jzhao11.git" to clone the repo, with "csc690-fa19-jzhao11" as default name.  
-Go to "csc690-fa19-jzhao11/BuySellApp".  
+Go to the local repo "csc690-fa19-jzhao11".  
 Double-click "BuySellApp.xcworkspace" to open it in XCode.  
 Click the running button in XCode to run this app.  
   
